@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 人中车可的博客</title>
+    <link>https://xiongzhongke.xyz/posts/</link>
+    <description>Recent content in Posts on 人中车可的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sun, 08 Dec 2019 23:43:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://xiongzhongke.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何用hugo搭建个人博客</title>
+      <link>https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 08 Dec 2019 23:43:25 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>安装hugo 在官网上下载，并把hugo.exe路径放到PATH中
+ brew install hugo hugo version    进入hugo官网，从step2开始抄代码，到step7，得到public目录
+ hugo new site lcfjxzk.github.io-generator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &amp;lsquo;theme = &amp;ldquo;ananke&amp;rdquo;&amp;rsquo; &amp;raquo; config.toml hugo new posts/开博大吉.md #编辑博客内容 hugo server -D #Navigate to your new site at http://localhost:1313/. hugo -D #得到public目录    添加要写的博客，将内容部署到GitHub pages 上
+ cd public git add . git commit -v git init git remote add origin git@github.</description>
+    </item>
+    
+    <item>
+      <title>开博大吉</title>
+      <link>https://xiongzhongke.xyz/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <pubDate>Sun, 08 Dec 2019 22:45:18 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <description>大家好，我的博客开通了，希望我能写出好文章给大家看。</description>
+    </item>
+    
+  </channel>
+</rss>
