@@ -6,10 +6,22 @@
     <description>Recent content on 人中车可的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 08 Dec 2019 23:43:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Dec 2019 22:50:00 +0800</lastBuildDate>
     
 	<atom:link href="https://xiongzhongke.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML入门笔记1</title>
+      <link>https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <pubDate>Thu, 12 Dec 2019 22:50:00 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <description>1.HTML 是谁发明的  Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。 李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。 如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。  2.HTML 起手应该写什么 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;ie=edge&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  练习
+http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
+4.全局属性有哪些  class属性 用来对网页元素进行分类  &amp;lt;p class=&amp;#34;xzkexgirlfriend&amp;#34;&amp;gt;我的前女友：高圆圆&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;我最喜欢的演员：周星驰&amp;lt;/p&amp;gt; &amp;lt;p class=&amp;#34;xzkexgirlfriend&amp;#34;&amp;gt;我的前女友：新垣结衣&amp;lt;/p&amp;gt; 上面代码中，第一个&amp;lt;p&amp;gt;和第三个&amp;lt;p&amp;gt;是一类，因为它们的class属性相同。
+ contenteditable属性 允许用户修改内容  &amp;lt;p contenteditable=&amp;#34;ture&amp;#34;&amp;gt; 鼠标点击，本句内容可以修改 &amp;lt;/p&amp;gt;  hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。  &amp;lt;p hidden&amp;gt;本句不会显示在页面上。&amp;lt;/p&amp;gt;  id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。  &amp;lt;p id=&amp;#34;xiongzhongke1&amp;#34;&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;p id=&amp;#34;xiongzhongke2&amp;#34;&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;p id=&amp;#34;xiongzhongke3&amp;#34;&amp;gt;&amp;lt;/p&amp;gt; id属性的值不能包含空格</description>
+    </item>
     
     <item>
       <title>如何用hugo搭建个人博客</title>

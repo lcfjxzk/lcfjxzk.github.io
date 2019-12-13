@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | HTML入门笔记1</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="HTML入门笔记1" />
+<meta property="og:description" content="1.HTML 是谁发明的  Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。 李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。 如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。  2.HTML 起手应该写什么 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt; 3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  练习
+http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
+4.全局属性有哪些  class属性 用来对网页元素进行分类  &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：高圆圆&lt;/p&gt; &lt;p&gt;我最喜欢的演员：周星驰&lt;/p&gt; &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：新垣结衣&lt;/p&gt; 上面代码中，第一个&lt;p&gt;和第三个&lt;p&gt;是一类，因为它们的class属性相同。
+ contenteditable属性 允许用户修改内容  &lt;p contenteditable=&#34;ture&#34;&gt; 鼠标点击，本句内容可以修改 &lt;/p&gt;  hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。  &lt;p hidden&gt;本句不会显示在页面上。&lt;/p&gt;  id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。  &lt;p id=&#34;xiongzhongke1&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke2&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke3&#34;&gt;&lt;/p&gt; id属性的值不能包含空格" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" />
+<meta property="article:published_time" content="2019-12-12T22:50:00+08:00" />
+<meta property="article:modified_time" content="2019-12-12T22:50:00+08:00" />
+<meta itemprop="name" content="HTML入门笔记1">
+<meta itemprop="description" content="1.HTML 是谁发明的  Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。 李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。 如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。  2.HTML 起手应该写什么 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt; 3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  练习
+http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
+4.全局属性有哪些  class属性 用来对网页元素进行分类  &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：高圆圆&lt;/p&gt; &lt;p&gt;我最喜欢的演员：周星驰&lt;/p&gt; &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：新垣结衣&lt;/p&gt; 上面代码中，第一个&lt;p&gt;和第三个&lt;p&gt;是一类，因为它们的class属性相同。
+ contenteditable属性 允许用户修改内容  &lt;p contenteditable=&#34;ture&#34;&gt; 鼠标点击，本句内容可以修改 &lt;/p&gt;  hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。  &lt;p hidden&gt;本句不会显示在页面上。&lt;/p&gt;  id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。  &lt;p id=&#34;xiongzhongke1&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke2&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke3&#34;&gt;&lt;/p&gt; id属性的值不能包含空格">
+<meta itemprop="datePublished" content="2019-12-12T22:50:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-12T22:50:00&#43;08:00" />
+<meta itemprop="wordCount" content="164">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTML入门笔记1"/>
+<meta name="twitter:description" content="1.HTML 是谁发明的  Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。 李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。 如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。  2.HTML 起手应该写什么 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt; 3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  练习
+http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
+4.全局属性有哪些  class属性 用来对网页元素进行分类  &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：高圆圆&lt;/p&gt; &lt;p&gt;我最喜欢的演员：周星驰&lt;/p&gt; &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：新垣结衣&lt;/p&gt; 上面代码中，第一个&lt;p&gt;和第三个&lt;p&gt;是一类，因为它们的class属性相同。
+ contenteditable属性 允许用户修改内容  &lt;p contenteditable=&#34;ture&#34;&gt; 鼠标点击，本句内容可以修改 &lt;/p&gt;  hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。  &lt;p hidden&gt;本句不会显示在页面上。&lt;/p&gt;  id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。  &lt;p id=&#34;xiongzhongke1&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke2&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke3&#34;&gt;&lt;/p&gt; id属性的值不能包含空格"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">HTML入门笔记1</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-12T22:50:00&#43;08:00">December 12, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="1html-">1.HTML 是谁发明的</h2>
+<ul>
+<li>Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。</li>
+<li>李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。</li>
+<li>如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。</li>
+</ul>
+<h2 id="2html-">2.HTML 起手应该写什么</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h2 id="3h1h6sectionarticlemainaside-">3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）</h2>
+<ul>
+<li>标题 h1~h6</li>
+<li>章节 section</li>
+<li>文章 article</li>
+<li>段落 p</li>
+<li>头部 header</li>
+<li>脚部 footer</li>
+<li>主要内容 main</li>
+<li>旁支内容 aside</li>
+<li>划分 div</li>
+</ul>
+<p>练习</p>
+<p><a href="http://js.jirengu.com/nudezijeyu/1/edit?html">http://js.jirengu.com/nudezijeyu/1/edit?html</a>,js,output</p>
+<h2 id="4">4.全局属性有哪些</h2>
+<ul>
+<li>class属性 用来对网页元素进行分类</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzkexgirlfriend&#34;</span>&gt;我的前女友：高圆圆&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;我最喜欢的演员：周星驰&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzkexgirlfriend&#34;</span>&gt;我的前女友：新垣结衣&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>上面代码中，第一个<code>&lt;p&gt;</code>和第三个<code>&lt;p&gt;</code>是一类，因为它们的class属性相同。</p>
+<ul>
+<li>contenteditable属性 允许用户修改内容</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">contenteditable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ture&#34;</span>&gt;
+鼠标点击，本句内容可以修改
+&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><ul>
+<li>hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">hidden</span>&gt;本句不会显示在页面上。&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><ul>
+<li>id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xiongzhongke1&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xiongzhongke2&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xiongzhongke3&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>id属性的值不能包含空格</p>
+<ul>
+<li>style属性用来指定当前元素的CSS样式。具体的设置，请看CSS教程。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: red;&#34;</span>&gt;hello xzk&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>上面代码指定文字颜色为红色。</p>
+<ul>
+<li>tabindex属性 方便用户使用Tab键遍历网页元素。按下Tab键，网页焦点从一个元素转移到另一个元素，tabindex属性的值是一个整数，表示用户按下Tab键时，网页焦点转移的顺序。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;这段文字可以获得焦点。&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><ul>
+<li>title属性 用来为元素添加附加说明，鼠标悬浮在元素上面时，会将title属性值作为浮动提示，显示出来。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;版权说明&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;本站内容使用创意共享许可证，可以自由使用。&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h2 id="5astrongemcodepre-">5.常用的内容标签有哪些，分别是什么意思（a、strong、em、code、pre 等等）</h2>
+<ul>
+<li>ol+li(ordered list+list item)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项A&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项B&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项C&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><ul>
+<li>ul+li(unordered list +list item)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项A&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项B&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;列表项C&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><ul>
+<li>dl+dt+dd(description list+term+data)</li>
+</ul>
+<p><code>&lt;dl&gt;</code>标签是一个块级元素，表示一组术语的列表（description list）;术语名（description term）由<code>&lt;dt&gt;</code>标签定义，术语解释（description detail）由<code>&lt;dd&gt;</code>标签定义;<code>&lt;dl&gt;</code>常用来定义词汇表。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">dl</span>&gt;
+  &lt;<span style="color:#f92672">dt</span>&gt;CPU&lt;/<span style="color:#f92672">dt</span>&gt;
+  &lt;<span style="color:#f92672">dd</span>&gt;中央处理器&lt;/<span style="color:#f92672">dd</span>&gt;
+
+  &lt;<span style="color:#f92672">dt</span>&gt;Memory&lt;/<span style="color:#f92672">dt</span>&gt;
+  &lt;<span style="color:#f92672">dd</span>&gt;内存&lt;/<span style="color:#f92672">dd</span>&gt;
+
+  &lt;<span style="color:#f92672">dt</span>&gt;Hard Disk&lt;/<span style="color:#f92672">dt</span>&gt;
+  &lt;<span style="color:#f92672">dd</span>&gt;硬盘&lt;/<span style="color:#f92672">dd</span>&gt;
+&lt;/<span style="color:#f92672">dl</span>&gt;
+</code></pre></div><p>上面代码的默认渲染结果如下:</p>
+<pre><code>CPU
+  中央处理器
+
+Memory
+  内存
+
+Hard Disk
+  硬盘
+</code></pre><ul>
+<li>pre(preview的缩写)</li>
+</ul>
+<p>有保留空格的作用。</p>
+<ul>
+<li>hr(水平分割线)</li>
+<li>br(换行)</li>
+<li>a(anchor的缩写)</li>
+</ul>
+<p>链接通过<code>&lt;a&gt;</code>标签表示，用户点击后，浏览器会跳转到指定的网址。
+标签内部不仅可以放置文字，也可以放置其他元素，比如段落、图像、多媒体等等。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://xiongzhongke.xyz/&#34;</span>&gt;熊仲轲的网站&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com/&#34;</span>&gt;
+  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com/foo.jpg&#34;</span>&gt;
+&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><ul>
+<li>em(emphasis的缩写)</li>
+</ul>
+<p>字体倾斜，表示语气强调。</p>
+<ul>
+<li>strong</li>
+</ul>
+<p>字体加粗，表示本质强调。</p>
+<ul>
+<li>code</li>
+</ul>
+<p>展示代码用。</p>
+<ul>
+<li>q(quote的缩写)</li>
+</ul>
+<p>表示引用。</p>
+<ul>
+<li>blockquote</li>
+</ul>
+<p>块级引用。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2019 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
