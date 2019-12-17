@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | HTML常用标签</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="HTML常用标签" />
+<meta property="og:description" content="1.a标签的用法  跳转外部页面 跳转内部锚点 跳转到邮箱或电话  首先输入以下命令，安装http-server或parcel，用来访问本地网页。
+yarn global add http-server yarn global add parcel 安装后，用命令
+http-server . -c-1 http-server -c-1 hs -c-1 或 parcel 文件名.html 来访问本地网页，不要双击HTML来访问自己本地的网页。
+a标签的href属性 网址 &lt;a href=&#34;//xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;https://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; 路径 &lt;a href=&#34;/a/b/c.html&#34;&gt;我是C.html&lt;/a&gt; &lt;a href=&#34;./index.html&#34;&gt;我是index.html&lt;/a&gt; 伪协议 &lt;a href=&#34;javascript:;&#34;&gt;我要一个a标签，但什么也不做，不刷新也不置顶&lt;/a&gt; &lt;a href=&#34;#xzk&#34;&gt;自动跳转到&#34;id=xzk&#34;的p标签&lt;/a&gt; &lt;a href=&#34;mailto:775126135@qq.com&#34;&gt;发邮件给xzk&lt;/a&gt; &lt;a href=&#34;tel:15072026695&#34;&gt;打电话给我&lt;/a&gt; a标签的target属性 有_blank/_top/_parent/_self四个值
+&lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;在空白页面打开指定网址&lt;/a&gt; &lt;body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_top&#34;&gt;有多个网页层层引用，在最顶层的网页打开指定网址&lt;/a&gt; &lt;div&gt; &lt;iframe src=&#34;我是引用的网页.html&#34;&gt; &lt;/iframe&gt; &lt;/div&gt; &lt;/body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_parent&#34;&gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" />
+<meta property="article:published_time" content="2019-12-16T19:34:25+08:00" />
+<meta property="article:modified_time" content="2019-12-16T19:34:25+08:00" />
+<meta itemprop="name" content="HTML常用标签">
+<meta itemprop="description" content="1.a标签的用法  跳转外部页面 跳转内部锚点 跳转到邮箱或电话  首先输入以下命令，安装http-server或parcel，用来访问本地网页。
+yarn global add http-server yarn global add parcel 安装后，用命令
+http-server . -c-1 http-server -c-1 hs -c-1 或 parcel 文件名.html 来访问本地网页，不要双击HTML来访问自己本地的网页。
+a标签的href属性 网址 &lt;a href=&#34;//xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;https://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; 路径 &lt;a href=&#34;/a/b/c.html&#34;&gt;我是C.html&lt;/a&gt; &lt;a href=&#34;./index.html&#34;&gt;我是index.html&lt;/a&gt; 伪协议 &lt;a href=&#34;javascript:;&#34;&gt;我要一个a标签，但什么也不做，不刷新也不置顶&lt;/a&gt; &lt;a href=&#34;#xzk&#34;&gt;自动跳转到&#34;id=xzk&#34;的p标签&lt;/a&gt; &lt;a href=&#34;mailto:775126135@qq.com&#34;&gt;发邮件给xzk&lt;/a&gt; &lt;a href=&#34;tel:15072026695&#34;&gt;打电话给我&lt;/a&gt; a标签的target属性 有_blank/_top/_parent/_self四个值
+&lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;在空白页面打开指定网址&lt;/a&gt; &lt;body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_top&#34;&gt;有多个网页层层引用，在最顶层的网页打开指定网址&lt;/a&gt; &lt;div&gt; &lt;iframe src=&#34;我是引用的网页.html&#34;&gt; &lt;/iframe&gt; &lt;/div&gt; &lt;/body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_parent&#34;&gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.">
+<meta itemprop="datePublished" content="2019-12-16T19:34:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-16T19:34:25&#43;08:00" />
+<meta itemprop="wordCount" content="306">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTML常用标签"/>
+<meta name="twitter:description" content="1.a标签的用法  跳转外部页面 跳转内部锚点 跳转到邮箱或电话  首先输入以下命令，安装http-server或parcel，用来访问本地网页。
+yarn global add http-server yarn global add parcel 安装后，用命令
+http-server . -c-1 http-server -c-1 hs -c-1 或 parcel 文件名.html 来访问本地网页，不要双击HTML来访问自己本地的网页。
+a标签的href属性 网址 &lt;a href=&#34;//xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;https://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; 路径 &lt;a href=&#34;/a/b/c.html&#34;&gt;我是C.html&lt;/a&gt; &lt;a href=&#34;./index.html&#34;&gt;我是index.html&lt;/a&gt; 伪协议 &lt;a href=&#34;javascript:;&#34;&gt;我要一个a标签，但什么也不做，不刷新也不置顶&lt;/a&gt; &lt;a href=&#34;#xzk&#34;&gt;自动跳转到&#34;id=xzk&#34;的p标签&lt;/a&gt; &lt;a href=&#34;mailto:775126135@qq.com&#34;&gt;发邮件给xzk&lt;/a&gt; &lt;a href=&#34;tel:15072026695&#34;&gt;打电话给我&lt;/a&gt; a标签的target属性 有_blank/_top/_parent/_self四个值
+&lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;在空白页面打开指定网址&lt;/a&gt; &lt;body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_top&#34;&gt;有多个网页层层引用，在最顶层的网页打开指定网址&lt;/a&gt; &lt;div&gt; &lt;iframe src=&#34;我是引用的网页.html&#34;&gt; &lt;/iframe&gt; &lt;/div&gt; &lt;/body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_parent&#34;&gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">HTML常用标签</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-16T19:34:25&#43;08:00">December 16, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="1a">1.a标签的用法</h1>
+<ul>
+<li>跳转外部页面</li>
+<li>跳转内部锚点</li>
+<li>跳转到邮箱或电话</li>
+</ul>
+<p>首先输入以下命令，安装http-server或parcel，用来访问本地网页。</p>
+<pre><code>yarn global add http-server
+yarn global add parcel
+</code></pre><p>安装后，用命令</p>
+<pre><code>http-server . -c-1
+http-server -c-1
+hs -c-1
+或
+parcel 文件名.html
+</code></pre><p>来访问本地网页，不要双击HTML来访问自己本地的网页。</p>
+<h2 id="ahref">a标签的href属性</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">网址
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;超链接&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;超链接&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;超链接&lt;/<span style="color:#f92672">a</span>&gt;
+
+路径
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/a/b/c.html&#34;</span>&gt;我是C.html&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.html&#34;</span>&gt;我是index.html&lt;/<span style="color:#f92672">a</span>&gt;
+
+伪协议
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:;&#34;</span>&gt;我要一个a标签，但什么也不做，不刷新也不置顶&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#xzk&#34;</span>&gt;自动跳转到&#34;id=xzk&#34;的p标签&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:775126135@qq.com&#34;</span>&gt;发邮件给xzk&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel:15072026695&#34;</span>&gt;打电话给我&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><h2 id="atarget">a标签的target属性</h2>
+<p>有_blank/_top/_parent/_self四个值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;在空白页面打开指定网址&lt;/<span style="color:#f92672">a</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+   &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;有多个网页层层引用，在最顶层的网页打开指定网址&lt;/<span style="color:#f92672">a</span>&gt;
+   &lt;<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;我是引用的网页.html&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">iframe</span>&gt;
+   &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_parent&#34;</span>&gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_self&#34;</span>&gt;在本页面打开指定网址&lt;/<span style="color:#f92672">a</span>&gt;
+
+其他值
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://xiongzhongke.xyz&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span>&gt;重复利用同一个窗口打开不同的页面&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://google.com&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span>&gt;重复利用同一个窗口打开不同的页面&lt;/<span style="color:#f92672">a</span>&gt;
+可打开控制台，用&#34;window.name&#34;来验证。
+
+古德拜项目
+&lt;<span style="color:#f92672">body</span>&gt;
+   &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://google.com&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span>&gt;google&lt;/<span style="color:#f92672">a</span>&gt;
+   &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://baidu.com&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span>&gt;baidu&lt;/<span style="color:#f92672">a</span>&gt;
+   
+   &lt;<span style="color:#f92672">hr</span> /&gt;
+    &lt;<span style="color:#f92672">iframe</span> 
+    <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: none; width: 100%; height: 800px;&#34;</span>
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">iframe</span>&gt;   
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+</code></pre></div><p>href的作用是，当用户点击“超链接”，可以打开指定网页&quot;xiongzhongke.xyz&rdquo;。
+target的作用是，在指定页面打开超链接指定的网页。</p>
+<p>iframe标签的作用是内嵌窗口，现在已经很少使用了，不要过多研究它。</p>
+<h1 id="2img">2.img标签的用法</h1>
+<p>发出get请求，展示一张图片。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">style</span>&gt;
+    <span style="color:#f92672">*</span> {
+      <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+    }
+    <span style="color:#f92672">img</span> {
+      <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    }
+  &lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>style里面的内容，使图片在手机端浏览时，与手机屏幕等宽。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xzk&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;一只狗子&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#a6e22e">xzk</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;图片加载成功&#34;</span>)
+    }
+    <span style="color:#a6e22e">xzk</span>.<span style="color:#a6e22e">onerror</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;图片加载失败&#34;</span>)
+      <span style="color:#a6e22e">xzk</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/404.png&#34;</span>
+    }
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>script里的代码使得可以用控制台的console查看图片加载成功和失败的情况。
+alt属性是当图片加载失败时，能看到对图片的文字说明。
+src属性是图片来源。
+width是图片宽度。</p>
+<h1 id="3table">3.table标签的用法</h1>
+<p>table标签用来做表格。</p>
+<ul>
+<li>相关标签
+table/thead/tbody/tfoot/tr/td/th</li>
+<li>相关样式</li>
+</ul>
+<p>table-layout,控制表格和列的宽度。</p>
+<p>table-layout: auto; auto大多数浏览器采用自动表格布局算法对表格布局。表格及单元格的宽度取决于其包含的内容。</p>
+<p>table-layout:fixed; fixed表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。</p>
+<p>border-collapse,控制单元格取消间距。</p>
+<p>border-spacing,控制单元格间距。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">style</span>&gt;
+      <span style="color:#f92672">table</span> {
+      <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
+      <span style="color:#66d9ef">table-layout</span>: <span style="color:#66d9ef">auto</span>; 
+      <span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+      <span style="color:#66d9ef">border-spacing</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+    }
+      <span style="color:#f92672">td</span>
+      <span style="color:#f92672">th</span> {
+      <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+    }
+  &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">table</span>&gt;
+    &lt;<span style="color:#f92672">thead</span>&gt;
+      &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span>&gt;表头&lt;/<span style="color:#f92672">th</span>&gt; //table head//
+      &lt;/<span style="color:#f92672">tr</span>&gt; //table row//
+    &lt;/<span style="color:#f92672">thead</span>&gt;
+    &lt;<span style="color:#f92672">tbody</span>&gt;
+      &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span>&gt;表头&lt;/<span style="color:#f92672">th</span>&gt;  
+        &lt;<span style="color:#f92672">td</span>&gt;数据1&lt;/<span style="color:#f92672">td</span>&gt; //table data//
+        &lt;<span style="color:#f92672">td</span>&gt;数据2&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;数据3&lt;/<span style="color:#f92672">td</span>&gt;
+      &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">tbody</span>&gt;
+    &lt;<span style="color:#f92672">tfoot</span>&gt;
+      &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span>&gt;表头&lt;/<span style="color:#f92672">th</span>&gt;  
+        &lt;<span style="color:#f92672">td</span>&gt;数据1&lt;/<span style="color:#f92672">td</span>&gt; //table data//
+        &lt;<span style="color:#f92672">td</span>&gt;数据2&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;数据3&lt;/<span style="color:#f92672">td</span>&gt;
+      &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">tfoot</span>&gt;
+  &lt;/<span style="color:#f92672">table</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h1 id="4form">4.form标签的用法</h1>
+<p><code>&lt;form&gt;</code>元素表示了文档中的一个区域，此区域包含有交互控制元件，用来向 Web 服务器提交信息。</p>
+<ul>
+<li>action属性：一个处理此表单信息的程序所在的URL。</li>
+<li>method属性：浏览器使用这种HTTP方式来提交表单。可能的值有post和get</li>
+<li>target属性：用来指示在提交表单之后，在哪个网址显示收到的回复。</li>
+<li>autocomplete属性：on：浏览器能够根据用户之前在表单里输入的值自动补全。（input记得加入 name=&quot;username&rdquo;）off：浏览器不会自动补全输入。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/xzk&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> /&gt;
+
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;
+      &lt;<span style="color:#f92672">strong</span>&gt;
+        xzk
+      &lt;/<span style="color:#f92672">strong</span>&gt;
+      &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;一只狗子&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;resize: none; width: 50%;height: 300px&#34;</span> &gt; &lt;/<span style="color:#f92672">textarea</span>&gt;
+  &lt;<span style="color:#f92672">hr</span> /&gt;
+  &lt;<span style="color:#f92672">select</span>&gt;
+      &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;-请选择-&lt;/<span style="color:#f92672">option</span>&gt;
+      &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;星期一&lt;/<span style="color:#f92672">option</span>&gt;
+      &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;星期二&lt;/<span style="color:#f92672">option</span>&gt;
+    &lt;/<span style="color:#f92672">select</span>&gt;
+  &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>input标签的各项属性可以用来制作单选(type=&quot;radio&rdquo; name=&quot;gender&rdquo;)，多选（type=&quot;checkbox&rdquo; name=&quot;hobby&rdquo;），提交文件(type=&quot;file&rdquo;)。</p>
+<p>textarea标签用来提交一段文字或文章。</p>
+<p>select+option标签可以用来制作下拉选择按钮。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2019 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -6,10 +6,23 @@
     <description>Recent content on 人中车可的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 12 Dec 2019 22:50:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 19:34:25 +0800</lastBuildDate>
     
 	<atom:link href="https://xiongzhongke.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML常用标签</title>
+      <link>https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 16 Dec 2019 19:34:25 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description>1.a标签的用法  跳转外部页面 跳转内部锚点 跳转到邮箱或电话  首先输入以下命令，安装http-server或parcel，用来访问本地网页。
+yarn global add http-server yarn global add parcel 安装后，用命令
+http-server . -c-1 http-server -c-1 hs -c-1 或 parcel 文件名.html 来访问本地网页，不要双击HTML来访问自己本地的网页。
+a标签的href属性 网址 &amp;lt;a href=&amp;#34;//xiongzhongke.xyz&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;超链接&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;https://xiongzhongke.xyz&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;超链接&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;http://xiongzhongke.xyz&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;超链接&amp;lt;/a&amp;gt; 路径 &amp;lt;a href=&amp;#34;/a/b/c.html&amp;#34;&amp;gt;我是C.html&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;./index.html&amp;#34;&amp;gt;我是index.html&amp;lt;/a&amp;gt; 伪协议 &amp;lt;a href=&amp;#34;javascript:;&amp;#34;&amp;gt;我要一个a标签，但什么也不做，不刷新也不置顶&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;#xzk&amp;#34;&amp;gt;自动跳转到&amp;#34;id=xzk&amp;#34;的p标签&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;mailto:775126135@qq.com&amp;#34;&amp;gt;发邮件给xzk&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;tel:15072026695&amp;#34;&amp;gt;打电话给我&amp;lt;/a&amp;gt; a标签的target属性 有_blank/_top/_parent/_self四个值
+&amp;lt;a href=&amp;#34;http://xiongzhongke.xyz&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;在空白页面打开指定网址&amp;lt;/a&amp;gt; &amp;lt;body&amp;gt; &amp;lt;a href=&amp;#34;http://xiongzhongke.xyz&amp;#34; target=&amp;#34;_top&amp;#34;&amp;gt;有多个网页层层引用，在最顶层的网页打开指定网址&amp;lt;/a&amp;gt; &amp;lt;div&amp;gt; &amp;lt;iframe src=&amp;#34;我是引用的网页.html&amp;#34;&amp;gt; &amp;lt;/iframe&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;a href=&amp;#34;http://xiongzhongke.xyz&amp;#34; target=&amp;#34;_parent&amp;#34;&amp;gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;#34;http://xiongzhongke.</description>
+    </item>
     
     <item>
       <title>HTML入门笔记1</title>
