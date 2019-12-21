@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/" />
-<meta property="og:updated_time" content="2019-12-16T19:34:25+08:00" />
+<meta property="og:updated_time" content="2019-12-21T17:04:58+08:00" />
 <meta itemprop="name" content="人中车可的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="人中车可的博客"/>
@@ -120,6 +120,37 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://xiongzhongke.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/" class="color-inherit dim link">
+            CSS盒模型是什么
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          CSS 盒模型(Box Model) 所有HTML元素可以看作盒子，在CSS中，&ldquo;box model&quot;这一术语是用来设计和布局时使用。 CSS盒模型本质上是一个盒子，封装周围的HTML元素，盒模型由外到内依次包括：
+ 边距（margin） 边框（border） 内边距（padding） 内容（content）  盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+两种盒模型  content-box  content-box width = 内容宽度
+ border-box  border-box width = 内容宽度 + padding + border
+border-box更好用。
+* { box-sizing: border-box; } 练习：
+http://js.jirengu.com/kuqowapere/3/edit?html,css,output
+margin合并  那些情况会合并   父元素、子元素margin合并 子元素之间margin合并  阻止margin合并   父子合并用padding/border挡住 父子合并用overflow:hidden挡住 父子合并用display：flex， 兄弟合并可用inline-block消除  基本长度单位  px 像素 em相对于自身font-size的倍数 百分数 整数  颜色  十六进制#FF6600 RGBA颜色rgb（0，0，0）或者（0，0，0，1） hsl颜色hsl（360，100%，100%）  
+        </div>
+          <a href="https://xiongzhongke.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="color-inherit dim link">
             HTML常用标签
             </a>
@@ -167,39 +198,18 @@ http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="color-inherit dim link">
-            如何用hugo搭建个人博客
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          安装hugo 在官网上下载，并把hugo.exe路径放到PATH中
- brew install hugo hugo version    进入hugo官网，从step2开始抄代码，到step7，得到public目录
- hugo new site lcfjxzk.github.io-generator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/开博大吉.md #编辑博客内容 hugo server -D #Navigate to your new site at http://localhost:1313/. hugo -D #得到public目录    添加要写的博客，将内容部署到GitHub pages 上
- cd public git add . git commit -v git init git remote add origin git@github.
-        </div>
-          <a href="https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
+              如何用hugo搭建个人博客
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://xiongzhongke.xyz/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" class="link black dim">

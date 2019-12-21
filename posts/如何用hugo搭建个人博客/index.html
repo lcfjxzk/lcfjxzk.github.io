@@ -41,7 +41,7 @@
  cd public git add . git commit -v git init git remote add origin git@github.">
 <meta itemprop="datePublished" content="2019-12-08T23:43:25&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-08T23:43:25&#43;08:00" />
-<meta itemprop="wordCount" content="67">
+<meta itemprop="wordCount" content="103">
 
 
 
@@ -146,7 +146,19 @@
 <li>
 <p>在github远程仓库settings中GitHub pages上点开链接即可。</p>
 </li>
+<li>
+<p>如何在 Hugo 里插入图片</p>
+</li>
 </ol>
+<ul>
+<li>将图片文件 1.png 存放到 static 目录里，得到 static/1.png</li>
+<li>在博客 Markdown 里写 <img src="/1.png" alt=""> 就能看到 static/1.png 对应的图片了</li>
+<li>如果你想在 static 里创建 images 目录，直接创建就好，对应的图片前面加上 /images 即可，比如：</li>
+<li>将图片文件 2.png 放到 static/images 目录里，得到 static/images/2.png</li>
+<li>在博客里写 <img src="/images/2.png" alt="">即可</li>
+</ul>
+<p>推荐使用 static/images 来存放图片，这样更有条理。
+推荐使用 VSCode 的拖放功能存入图片。</p>
 <ul class="pa0">
   
 </ul>
