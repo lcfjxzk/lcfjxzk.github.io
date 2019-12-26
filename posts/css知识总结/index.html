@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | CSS知识总结</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="CSS知识总结" />
+<meta property="og:description" content="一、CSS布局 布局是屏幕平面上的。   float布局
+  flex布局
+  一维布局用flex
+经验
+ 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
+https://css-tricks.com/snippets/css/complete-guide-grid/
+二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
+ 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
+ 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
+CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2019-12-25T00:00:11+08:00" />
+<meta property="article:modified_time" content="2019-12-25T00:00:11+08:00" />
+<meta itemprop="name" content="CSS知识总结">
+<meta itemprop="description" content="一、CSS布局 布局是屏幕平面上的。   float布局
+  flex布局
+  一维布局用flex
+经验
+ 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
+https://css-tricks.com/snippets/css/complete-guide-grid/
+二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
+ 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
+ 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
+CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div.">
+<meta itemprop="datePublished" content="2019-12-25T00:00:11&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-25T00:00:11&#43;08:00" />
+<meta itemprop="wordCount" content="183">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS知识总结"/>
+<meta name="twitter:description" content="一、CSS布局 布局是屏幕平面上的。   float布局
+  flex布局
+  一维布局用flex
+经验
+ 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
+https://css-tricks.com/snippets/css/complete-guide-grid/
+二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
+ 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
+ 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
+CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">CSS知识总结</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-25T00:00:11&#43;08:00">December 25, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="css">一、CSS布局</h2>
+<p>布局是屏幕平面上的。
+<img src="/image/02.png" alt=""></p>
+<ol>
+<li>
+<p>float布局</p>
+</li>
+<li>
+<p>flex布局</p>
+</li>
+</ol>
+<p>一维布局用flex</p>
+<p>经验</p>
+<ul>
+<li>永远不要把我width和height写死，除非特殊说明。</li>
+<li>用min-width/max-width/min-height/max-height</li>
+<li>flex可以基本满足所有需求</li>
+<li>flex和margin-xxx：auto配合有意外的效果。</li>
+</ul>
+<ol start="3">
+<li>Grid布局</li>
+</ol>
+<p>二维布局用Grid，适合不规则布局。</p>
+<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+<h2 id="css1">二、CSS定位</h2>
+<p>定位是垂直于屏幕的。
+<img src="/image/1.png" alt="">
+<img src="/image/01.png" alt=""></p>
+<ol>
+<li>position属性</li>
+</ol>
+<ul>
+<li>static 默认值，待在文档流里</li>
+<li>relative 相对定位</li>
+<li>absolute 绝对定位</li>
+<li>fixed 固定定位</li>
+<li>sticky 粘滞定位</li>
+</ul>
+<p>经验：</p>
+<ul>
+<li>如果你写了absolute,一般都要补一个relative</li>
+<li>如果你写了absolute或fixed，一定要补top和left</li>
+<li>sticky兼容性很差，主要用于面试装逼。</li>
+</ul>
+<ol start="2">
+<li>层叠上下文</li>
+</ol>
+<p>Google搜索“MDN 层叠上下文”</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context</a></p>
+<ul>
+<li>每一个层叠上下文就是一个新的小世界（作用域）</li>
+<li>这个小世界里面的z-index跟外界无关</li>
+<li>处在同一个小世界的z-index才能比较。</li>
+<li>记住负的z-index逃不出小世界。</li>
+</ul>
+<p><a href="http://js.jirengu.com/modez/1/edit?html">http://js.jirengu.com/modez/1/edit?html</a>,css,output</p>
+<h2 id="css2">CSS定位回顾</h2>
+<ul>
+<li>盒模型中的背景</li>
+<li>浮动是怎么脱离文档流的</li>
+<li>position的五个取值</li>
+<li>z-index的用法</li>
+<li>层叠上下文是什么</li>
+<li>负z-index</li>
+</ul>
+<h2 id="heading">三、浏览器渲染原理</h2>
+<ol>
+<li>根据HTML构建HTML树（DOM）</li>
+<li>根据CSS构建CSS树（CSSOM）</li>
+<li>将两棵树合并成一颗渲染树（render tree）</li>
+<li>Layout布局（文档流、盒模型、计算大小和位置）</li>
+<li>Paint绘制（把边框颜色、文字颜色、阴影等画出来）</li>
+<li>Compose合成（根据层叠关系展示画面）</li>
+</ol>
+<h3 id="heading1">如何更新样式</h3>
+<ul>
+<li>一般用JS来更新样式</li>
+</ul>
+<p>div.style.background = &lsquo;red&rsquo;</p>
+<p>div.style.display = &lsquo;none&rsquo;</p>
+<p>div.classList.add(&lsquo;red&rsquo;)</p>
+<p>div.remove()直接删掉节点</p>
+<h2 id="css-transition--animation">四、CSS 动画的两种做法（transition 和 animation）</h2>
+<h2 id="1-transform">1. transform</h2>
+<p>将一个div绝对居中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">#son{    
+<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
+<span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+<span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+<span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>, <span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>)<span style="color:#960050;background-color:#1e0010">；</span>
+}
+
+.<span style="color:#a6e22e">father</span>{
+<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;
+<span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>
+}
+</code></pre></div><p>transform常用值</p>
+<ul>
+<li>translateX/Y/Z 沿着XYZ轴移动</li>
+<li>scale 放大</li>
+<li>rotate 旋转</li>
+<li>skew 倾斜</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">#heart:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">5</span>) rotate(<span style="color:#ae81ff">1080</span><span style="color:#66d9ef">deg</span>);
+}
+</code></pre></div><h2 id="2-transition">2. transition</h2>
+<p>过渡效果，补充中间帧。</p>
+<p>语法</p>
+<p>transition：属性名 时长 过渡方式  延迟。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">#heart {
+  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">s</span>;
+  <span style="color:#66d9ef">animation</span>: <span style="color:#ae81ff">0.9</span><span style="color:#66d9ef">s</span> heart <span style="color:#66d9ef">infinite</span> <span style="color:#66d9ef">alternate</span><span style="color:#f92672">-</span><span style="color:#66d9ef">reverse</span>;
+}
+</code></pre></div><p>不是所有属性都能过渡。</p>
+<p>display:none=&gt;block没法过渡</p>
+<p>一般改成</p>
+<p>visibility：hidden=&gt;visible</p>
+<h2 id="3-animation">3. animation</h2>
+<p>红心练习
+<a href="http://js.jirengu.com/yubey/1/edit?html">http://js.jirengu.com/yubey/1/edit?html</a>,css,output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">#heart {
+  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">animation</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">s</span> heart <span style="color:#66d9ef">infinite</span> <span style="color:#66d9ef">alternate</span><span style="color:#f92672">-</span><span style="color:#66d9ef">reverse</span>;
+}
+</code></pre></div><p>Google搜索“MDN animation”——
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation">animation</a></p>
+<h2 id="4-">4. 如何让动画停留在最后一帧</h2>
+<p>搜索“CSS animation stop at end”</p>
+<p>加一个forwards</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">#demo.<span style="color:#a6e22e">start</span>{
+  <span style="color:#66d9ef">animation</span>: xxx <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">forwards</span>;
+}
+</code></pre></div><h2 id="5-keyframes">5. @keyframes</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">xxx</span> {
+  <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+    <span style="color:#66d9ef">transform</span>: <span style="color:#66d9ef">none</span>;
+  }
+  <span style="color:#f92672">66</span>.<span style="color:#a6e22e">66</span><span style="color:#f92672">%</span>{
+    <span style="color:#66d9ef">transform</span>: translateX(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>);
+  }
+  <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+    <span style="color:#66d9ef">transform</span>: translateX(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) translateY(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>);
+  }
+</code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2019 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/posts/" />
-<meta property="og:updated_time" content="2019-12-21T17:04:58+08:00" />
+<meta property="og:updated_time" content="2019-12-25T00:00:11+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -89,6 +89,31 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="link black dim">
+        CSS知识总结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、CSS布局 布局是屏幕平面上的。   float布局
+  flex布局
+  一维布局用flex
+经验
+ 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
+https://css-tricks.com/snippets/css/complete-guide-grid/
+二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
+ 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
+ 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
+CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
