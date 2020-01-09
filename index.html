@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/" />
-<meta property="og:updated_time" content="2020-01-02T22:45:26+08:00" />
+<meta property="og:updated_time" content="2020-01-09T20:43:19+08:00" />
 <meta itemprop="name" content="人中车可的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="人中车可的博客"/>
@@ -120,6 +120,36 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://xiongzhongke.xyz/posts/js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="color-inherit dim link">
+            JS语法介绍
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          一、什么是表达式和语句 表达式
+1+2 add(1,2) console.log console.log(3) 语句
+var a = 1  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但return后面不能回车  二、标识符的规则 第一个字符，可以是Unicode字母或$或_或中文，第一个字符后面的字符，还可以有数字。
+var _ = 1 var $ = 2 var __ = 6 var 你好 = &#34;hi&#34; 三、if else 语句  if(表达式){语句1}else{语句2}；  如果(表达式)为真，执行{语句1}；
+如果(表达式)为假，执行{语句2}；
+switch语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式1？表达式2：表达式3
+a&gt;b ? a:b &amp;&amp;短路逻辑，&amp;读为and  A &amp;&amp; B &amp;&amp; C &amp;&amp; D取第一个假值或D 不会取true/false
+        </div>
+          <a href="https://xiongzhongke.xyz/posts/js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://xiongzhongke.xyz/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="color-inherit dim link">
             JavaScript的诞生
             </a>
@@ -192,46 +222,18 @@ http://127.0.0.1:8080/文件名 本地电脑调试
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="color-inherit dim link">
-            CSS知识总结
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          一、CSS布局 布局是屏幕平面上的。   float布局
-  flex布局
-  一维布局用flex
-经验
- 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
-https://css-tricks.com/snippets/css/complete-guide-grid/
-二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
- 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
-https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
- 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
-CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div.
-        </div>
-          <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="link black dim">
+              CSS知识总结
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://xiongzhongke.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/" class="link black dim">
@@ -248,12 +250,6 @@ CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 positio
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="link black dim">
               HTML入门笔记1
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
-              如何用hugo搭建个人博客
             </a>
           </h2>
         
