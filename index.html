@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/" />
-<meta property="og:updated_time" content="2020-01-09T20:43:19+08:00" />
+<meta property="og:updated_time" content="2020-01-11T22:11:05+08:00" />
 <meta itemprop="name" content="人中车可的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="人中车可的博客"/>
@@ -120,6 +120,36 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://xiongzhongke.xyz/posts/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="color-inherit dim link">
+            JS对象基本用法
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;'name' 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&ndash;&gt;'frank' 也叫对象的属性值。
+键值对&ndash;&gt;'name':'frank'
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。
+        </div>
+          <a href="https://xiongzhongke.xyz/posts/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://xiongzhongke.xyz/posts/js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="color-inherit dim link">
             JS语法介绍
             </a>
@@ -186,48 +216,18 @@ Javascript设计思路如下：
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://xiongzhongke.xyz/posts/%E6%B5%85%E6%9E%90url/" class="color-inherit dim link">
-            浅析URL
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          一、URL 包含哪几部分，每部分分别有什么作用 A Uniform Resource Locator。 例子：https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5
- 协议 =&gt; https:// 域名 =&gt; www.baidu.com IP =&gt; 220.181.38.148 / 39.156.69.79（百度IP）  Internet Protocal。定位一台设备；封装数据报文，以跟其他设备交流。
- 端口 =&gt; 一台服务器可以提供很多服务。每个服务对应一个号码，这个号码叫端口号port。  http服务最好用80端口（http://127.0.0.1:8080/文件名 本地电脑调试）
-https服务最好用443端口
-FTP服务（大学校园网用）最好用21端口
-一共有65535个端口。0~1023端口留给系统/管理员使用。其他端口给普通用户使用。比如http-server默认使用8080端口。一个端口如果被占用，你就只能换一个端口。 设置端口号：
-hs -c-1 -p 1200 就使用新的端口号来访问本地文件http://127.0.0.1:1200/index.html
- 路径 =&gt; /s, 用来判断你要访问什么网页。 查询参数 =&gt; ?wd=hello&amp;rsv_spt=1，判断你要访问该网页的第几页 锚点 =&gt; 访问该页面的哪一块内容，实现文档内部的定位。  IP用来定位一个设备，端口用来定位一个设备的一个服务，有了IP和端口，我们就可以定位一个设备提供的服务。比如百度的设备提供的网页服务，腾讯的设备提供的聊天服务，或者淘宝的设备提供的支付服务。这些服务都可以通过IP和端口唯一确定。 IP和端口缺一不可。 二、IP 的作用是什么，ping 命令怎么用  Internet Protocal。 主要约定两件事：（1）定位一台设备；（2）封装数据报文，以跟其他设备交流。 外网IP：路由器对应一个外网IP，是电信分配给路由器的。（这里的外网指：你的路由器之外的网络），例如：58.51.255.38(查询ip138.com可以看到自己路由器分配的外网IP)，当路由器重启，会重新分配一个外网ip给你。 内网IP：路由器会在你家里创建一个内网，内网中的设备（电脑，手机，ipad）使用内网IP。这个IP的格式一般来说是/192.168.xxx.xxx/。  内网IP是路由器自己分配给自己的。一般路由器会给自己分配一个好记的内网IP/192.168.1.1/，路由器会给内网中的每一个设备分配一个内网IP，例如电脑是192.168.1.2，手机是192.168.1.3，以此类推。
-外网和内网是两个隔绝的空间，无法互通。唯一的联通点是路由器。所以路由器被叫做“网关”。
-http://192.168.1.58:8080/文件名 本地手机调试
-http://127.0.0.1:8080/文件名 本地电脑调试
-通过路径C:\Windows\System32\drivers\etc\hosts，以管理员身份打开hosts文件，加入一行代码
-127.0.0.1 xiongzk 可以改变调试网址为：http://xiongzk:8080/文件名
-        </div>
-          <a href="https://xiongzhongke.xyz/posts/%E6%B5%85%E6%9E%90url/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://xiongzhongke.xyz/posts/%E6%B5%85%E6%9E%90url/" class="link black dim">
+              浅析URL
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="link black dim">
@@ -244,12 +244,6 @@ http://127.0.0.1:8080/文件名 本地电脑调试
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="link black dim">
               HTML常用标签
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="link black dim">
-              HTML入门笔记1
             </a>
           </h2>
         

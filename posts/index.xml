@@ -6,10 +6,25 @@
     <description>Recent content in Posts on 人中车可的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 09 Jan 2020 20:43:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 22:11:05 +0800</lastBuildDate>
     
 	<atom:link href="https://xiongzhongke.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS对象基本用法</title>
+      <link>https://xiongzhongke.xyz/posts/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 11 Jan 2020 22:11:05 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &amp;#34;frank&amp;#34;, age: 18 }; let obj = new Object({ name: &amp;#34;frank&amp;#34; }); console.log({ name: &amp;#34;frank&amp;#34;, age: 18 }); 对象的属性  键 key&amp;ndash;&amp;gt;&#39;name&#39; 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&amp;ndash;&amp;gt;&#39;frank&#39; 也叫对象的属性值。
+键值对&amp;ndash;&amp;gt;&#39;name&#39;:&#39;frank&#39;
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&amp;#39;name&amp;#39; let obj ={p1:&amp;#39;frank&amp;#39;},属性名为字符串&amp;#39;p1&amp;#39; let obj = {[p1]:&amp;#39;frank&amp;#39;},这样写,属性名为变量p1,变量求值后属性名为&amp;#39;name&amp;#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&amp;#34;xxx&amp;#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。</description>
+    </item>
     
     <item>
       <title>JS语法介绍</title>

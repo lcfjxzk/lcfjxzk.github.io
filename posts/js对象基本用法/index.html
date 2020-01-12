@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | JS对象基本用法</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="JS对象基本用法" />
+<meta property="og:description" content="一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;&#39;name&#39; 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&ndash;&gt;&#39;frank&#39; 也叫对象的属性值。
+键值对&ndash;&gt;&#39;name&#39;:&#39;frank&#39;
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" />
+<meta property="article:published_time" content="2020-01-11T22:11:05+08:00" />
+<meta property="article:modified_time" content="2020-01-11T22:11:05+08:00" />
+<meta itemprop="name" content="JS对象基本用法">
+<meta itemprop="description" content="一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;&#39;name&#39; 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&ndash;&gt;&#39;frank&#39; 也叫对象的属性值。
+键值对&ndash;&gt;&#39;name&#39;:&#39;frank&#39;
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。">
+<meta itemprop="datePublished" content="2020-01-11T22:11:05&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-11T22:11:05&#43;08:00" />
+<meta itemprop="wordCount" content="173">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS对象基本用法"/>
+<meta name="twitter:description" content="一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;&#39;name&#39; 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&ndash;&gt;&#39;frank&#39; 也叫对象的属性值。
+键值对&ndash;&gt;&#39;name&#39;:&#39;frank&#39;
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">JS对象基本用法</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-01-11T22:11:05&#43;08:00">January 11, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="heading">一、对象的定义、声明对象的两种语法</h2>
+<ol>
+<li>对象的定义</li>
+</ol>
+<ul>
+<li>无序的数据集合</li>
+<li>键值对的集合</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;frank&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span> };
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object({ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;frank&#34;</span> });
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>({ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;frank&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span> });
+</code></pre></div><ol start="2">
+<li>对象的属性</li>
+</ol>
+<p>键 key&ndash;&gt;<code>'name'</code> 也叫对象的属性名。</p>
+<p>键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。</p>
+<p>值 value&ndash;&gt;<code>'frank'</code> 也叫对象的属性值。</p>
+<p>键值对&ndash;&gt;<code>'name':'frank'</code></p>
+<p><code>Object.keys(obj)</code>可以得到 obj 的所有 key。</p>
+<ol start="3">
+<li>变量作属性名</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;name&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span>{<span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;frank&#39;</span>},<span style="color:#a6e22e">属性名为字符串</span><span style="color:#e6db74">&#39;p1&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {[<span style="color:#a6e22e">p1</span>]<span style="color:#f92672">:</span><span style="color:#e6db74">&#39;frank&#39;</span>},<span style="color:#a6e22e">这样写</span>,<span style="color:#a6e22e">属性名为变量p1</span>,<span style="color:#a6e22e">变量求值后属性名为</span><span style="color:#e6db74">&#39;name&#39;</span>
+</code></pre></div><ol start="4">
+<li>隐藏的属性名</li>
+</ol>
+<p>JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。</p>
+<h2 id="heading1">二、如何删除对象的属性</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">xxx</span>;
+<span style="color:#a6e22e">或</span>;
+<span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#34;xxx&#34;</span>];
+</code></pre></div><p>以上代码删除 obj 的 xxx 属性名和属性值。</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%88%A0%E9%99%A4%E5%B1%9E%E6%80%A7%E5%90%8D.png" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+</code></pre></div><p>以上代码只删除属性值。</p>
+<p>如何查看是否删除成功？输入以下代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;xxx&#34;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>;
+</code></pre></div><p>返回值为 false,表示删除成功，即判断该属性不在该对象里面；返回值为 true 表示没有删除。</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%88%A4%E6%96%AD%E5%B1%9E%E6%80%A7%E5%9C%A8%E4%B8%8D%E5%9C%A8%E5%AF%B9%E8%B1%A1%E9%87%8C%E9%9D%A2.png" alt=""></p>
+<h2 id="heading2">三、如何查看对象的属性</h2>
+<p><code>Object.keys(obj)</code>查看自身所有属性</p>
+<p><code>console.dir(obj)</code>查看自身+共有属性</p>
+<p><code>obj.hasOwnProperty('toString')</code>判断一个属性是自身的还是共有的
+<code>'toString in obj'</code>查看是否有这个属性。</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E6%9F%A5%E7%9C%8B%E5%B1%9E%E6%80%A7%E5%90%8D.png" alt=""></p>
+<p>查看单个属性</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E6%9F%A5%E7%9C%8B%E5%8D%95%E4%B8%AA%E5%B1%9E%E6%80%A7%E5%90%8D.png" alt=""></p>
+<p>优先使用<code>obj['key']</code>查看</p>
+<h2 id="heading3">对象的原型也有原型</h2>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8E%9F%E5%9E%8B%E4%B9%9F%E6%9C%89%E5%8E%9F%E5%9E%8B.png" alt=""></p>
+<h2 id="heading4">四、如何修改或增加对象的属性</h2>
+<ol>
+<li>修改或增加对象的自身属性</li>
+</ol>
+<p>直接赋值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;frank&#34;</span> };
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;frank&#34;</span>;
+<span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;frank&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;name&#34;</span>;
+</code></pre></div><p>批量赋值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">obj</span>, { <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>, <span style="color:#a6e22e">gender</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">man</span> });
+</code></pre></div><ol start="2">
+<li>修改或增加对象的共有属性</li>
+</ol>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%85%B1%E6%9C%89%E5%B1%9E%E6%80%A7.png" alt=""></p>
+<p>不推荐用以下方法修改共有属性</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E4%BF%AE%E6%94%B9%E5%85%B1%E6%9C%89%E5%B1%9E%E6%80%A7.png" alt=""></p>
+<p>推荐用以下方法修改共有属性</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">window.Object.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">toString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yyy&#34;</span>;
+</code></pre></div><p><img src="/image/%E7%AC%AC24%E8%AF%BE%E7%94%A8window%E4%BF%AE%E6%94%B9%E5%85%B1%E6%9C%89%E5%B1%9E%E6%80%A7.png" alt=""></p>
+<p>一般不要修改共有属性，会引起很多问题。</p>
+<ol start="3">
+<li>原型链</li>
+</ol>
+<p>原型链图解</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%9B%BE%E8%A7%A3.png" alt=""></p>
+<p>推荐用以下方法创建原型</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">common</span>);
+<span style="color:#a6e22e">表示以common为原型来创建person</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">common</span>);
+<span style="color:#a6e22e">表示以common为原型来创建obj</span>;
+</code></pre></div><p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%8E%9F%E5%9E%8B%E5%88%9B%E5%BB%BA%E6%8E%A8%E8%8D%90%E6%96%B9%E6%B3%95.png" alt=""></p>
+<p>不推荐用以下方法创建原型</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">__proto__</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">common</span>;
+<span style="color:#a6e22e">不推荐</span>;
+</code></pre></div><p>效能很低，所以不推荐。</p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E5%8E%9F%E5%9E%8B%E9%93%BE.png" alt=""></p>
+<h2 id="name-in-obj--objhasownpropertyname-">五、&lsquo;name&rsquo; in obj 和 obj.hasOwnProperty(&lsquo;name&rsquo;) 的区别</h2>
+<p><code>'name' in obj</code></p>
+<ul>
+<li>返回值为 true</li>
+</ul>
+<p>&lsquo;name'是对象 obj 的一个属性，有可能是自身属性也有可能是共有属性。</p>
+<ul>
+<li>返回值为 false</li>
+</ul>
+<p>&lsquo;name'不是对象 obj 的属性。</p>
+<p><code>obj.hasOwnProperty('name')</code></p>
+<ul>
+<li>
+<p>返回值为 true</p>
+<p>&lsquo;name'是对象 obj 的自身属性。</p>
+</li>
+<li>
+<p>返回值为 false</p>
+<p>&lsquo;name'不是对象 obj 的自身属性。</p>
+</li>
+</ul>
+<h2 id="heading5">六、增删改查总结</h2>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E6%80%BB%E7%BB%931.png" alt=""></p>
+<p><img src="/image/%E7%AC%AC24%E8%AF%BE%E6%80%BB%E7%BB%932.png" alt=""></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
