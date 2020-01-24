@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | 第26课JS数组</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="第26课JS数组" />
+<meta property="og:description" content="一、数组是什么 二、数组增删改查  增 删  删除头部元素
+arr.shift(); //arr被修改，并返回被删元素 删除尾部元素
+arr.pop(); //arr被修改，并返回被删元素 删除中间元素
+arr.splice(x, 1); //从x号元素开始，从左至右删除一个元素 arr.splice(x, 3); //从x号元素开始，从左至右删除三个元素 arr.splice(x, 1, &#34;z&#34;); //并在删除位置加入&#39;z&#39; arr.splice(x, 1, &#34;z&#34;, &#34;k&#34;); //并在删除位置加入&#39;z&#39;,&#39;k&#39;  改 查   查看所有属性名  let arr = [1, 2, 3, 4, 5]; arr.x = &#34;xxx&#34;; Object.keys(arr); for (let key in arr) { console.log(`${key}:${arr[key]}`); } for 循环是访问数组比较常见的形式。
+查看数字（字符串）属性名和值。
+查看单个属性  查找某个元素是否在数组里。
+arr.indexOf(item); //存在返回索引，否则返回-1 使用条件查找元素
+arr.find(item =&gt; item % 2 === 0); //找第一个偶数 使用条件查找元素的索引" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/%E7%AC%AC26%E8%AF%BEjs%E6%95%B0%E7%BB%84/" />
+<meta property="article:published_time" content="2020-01-15T21:29:18+08:00" />
+<meta property="article:modified_time" content="2020-01-15T21:29:18+08:00" />
+<meta itemprop="name" content="第26课JS数组">
+<meta itemprop="description" content="一、数组是什么 二、数组增删改查  增 删  删除头部元素
+arr.shift(); //arr被修改，并返回被删元素 删除尾部元素
+arr.pop(); //arr被修改，并返回被删元素 删除中间元素
+arr.splice(x, 1); //从x号元素开始，从左至右删除一个元素 arr.splice(x, 3); //从x号元素开始，从左至右删除三个元素 arr.splice(x, 1, &#34;z&#34;); //并在删除位置加入&#39;z&#39; arr.splice(x, 1, &#34;z&#34;, &#34;k&#34;); //并在删除位置加入&#39;z&#39;,&#39;k&#39;  改 查   查看所有属性名  let arr = [1, 2, 3, 4, 5]; arr.x = &#34;xxx&#34;; Object.keys(arr); for (let key in arr) { console.log(`${key}:${arr[key]}`); } for 循环是访问数组比较常见的形式。
+查看数字（字符串）属性名和值。
+查看单个属性  查找某个元素是否在数组里。
+arr.indexOf(item); //存在返回索引，否则返回-1 使用条件查找元素
+arr.find(item =&gt; item % 2 === 0); //找第一个偶数 使用条件查找元素的索引">
+<meta itemprop="datePublished" content="2020-01-15T21:29:18&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-15T21:29:18&#43;08:00" />
+<meta itemprop="wordCount" content="143">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="第26课JS数组"/>
+<meta name="twitter:description" content="一、数组是什么 二、数组增删改查  增 删  删除头部元素
+arr.shift(); //arr被修改，并返回被删元素 删除尾部元素
+arr.pop(); //arr被修改，并返回被删元素 删除中间元素
+arr.splice(x, 1); //从x号元素开始，从左至右删除一个元素 arr.splice(x, 3); //从x号元素开始，从左至右删除三个元素 arr.splice(x, 1, &#34;z&#34;); //并在删除位置加入&#39;z&#39; arr.splice(x, 1, &#34;z&#34;, &#34;k&#34;); //并在删除位置加入&#39;z&#39;,&#39;k&#39;  改 查   查看所有属性名  let arr = [1, 2, 3, 4, 5]; arr.x = &#34;xxx&#34;; Object.keys(arr); for (let key in arr) { console.log(`${key}:${arr[key]}`); } for 循环是访问数组比较常见的形式。
+查看数字（字符串）属性名和值。
+查看单个属性  查找某个元素是否在数组里。
+arr.indexOf(item); //存在返回索引，否则返回-1 使用条件查找元素
+arr.find(item =&gt; item % 2 === 0); //找第一个偶数 使用条件查找元素的索引"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">第26课JS数组</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-01-15T21:29:18&#43;08:00">January 15, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="heading">一、数组是什么</h2>
+<h2 id="heading1">二、数组增删改查</h2>
+<ul>
+<li>增</li>
+<li>删</li>
+</ul>
+<p>删除头部元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">shift</span>(); <span style="color:#75715e">//arr被修改，并返回被删元素
+</span></code></pre></div><p>删除尾部元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">pop</span>(); <span style="color:#75715e">//arr被修改，并返回被删元素
+</span></code></pre></div><p>删除中间元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">//从x号元素开始，从左至右删除一个元素
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">3</span>); <span style="color:#75715e">//从x号元素开始，从左至右删除三个元素
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;z&#34;</span>); <span style="color:#75715e">//并在删除位置加入&#39;z&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;k&#34;</span>); <span style="color:#75715e">//并在删除位置加入&#39;z&#39;,&#39;k&#39;
+</span></code></pre></div><ul>
+<li>改</li>
+<li>查</li>
+</ul>
+<ol>
+<li>查看所有属性名</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxx&#34;</span>;
+Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">arr</span>);
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">arr</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">key</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">key</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+}
+</code></pre></div><p>for 循环是访问数组比较常见的形式。</p>
+<p>查看数字（字符串）属性名和值。</p>
+<ol start="2">
+<li>查看单个属性</li>
+</ol>
+<p>查找某个元素是否在数组里。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">item</span>); <span style="color:#75715e">//存在返回索引，否则返回-1
+</span></code></pre></div><p>使用条件查找元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//找第一个偶数
+</span></code></pre></div><p>使用条件查找元素的索引</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">findIndex</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//找第一个偶数的索引
+</span></code></pre></div><h2 id="heading2">三、数组元素增加、修改、排序</h2>
+<ol>
+<li>增加</li>
+</ol>
+<p>在尾部添加元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">newItem</span>)<span style="color:#75715e">//修改arr，返回新长度
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item1</span>,<span style="color:#a6e22e">item2</span>)<span style="color:#75715e">//修改arr，返回新长度
+</span></code></pre></div><p>在头部添加元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#a6e22e">newItem</span>)<span style="color:#75715e">//修改arr,返回新长度
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#a6e22e">item1</span>,<span style="color:#a6e22e">item2</span>)<span style="color:#75715e">//修改arr,返回新长度
+</span></code></pre></div><p>在中间添加元素</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;x&#39;</span>)<span style="color:#75715e">//在index处插入&#39;x&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;x&#39;</span>,<span style="color:#e6db74">&#39;y&#39;</span>)
+</code></pre></div><ol start="2">
+<li>修改</li>
+</ol>
+<p>反转顺序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reverse</span>()
+</code></pre></div><p>自定义顺序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)=&gt;<span style="color:#a6e22e">a</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span>)
+</code></pre></div><p>例1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>]
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>(
+<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)
+{<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span>)
+{<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>}
+<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">===</span><span style="color:#a6e22e">b</span>)
+{<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+}<span style="color:#66d9ef">else</span>{
+<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>}                      })
+</code></pre></div><p>JS默认从小到大排序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#ae81ff">5</span>) [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>]
+</code></pre></div><p>例2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span>[
+    {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小明&#39;</span>,<span style="color:#a6e22e">score</span><span style="color:#f92672">:</span><span style="color:#ae81ff">99</span>},{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;小红&#39;</span>,<span style="color:#a6e22e">score</span><span style="color:#f92672">:</span><span style="color:#ae81ff">95</span>},{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;大黄&#39;</span>,<span style="color:#a6e22e">score</span><span style="color:#f92672">:</span><span style="color:#ae81ff">100</span>}
+]
+
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)=&gt;<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">score</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">score</span>)<span style="color:#75715e">//按分数从小到大排序
+</span></code></pre></div><p>排序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;小红&#34;</span>, <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">95</span>}
+<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;小明&#34;</span>, <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">99</span>}
+<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;大黄&#34;</span>, <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>}
+<span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>
+<span style="color:#a6e22e">__proto__</span><span style="color:#f92672">:</span> Array(<span style="color:#ae81ff">0</span>)
+</code></pre></div><h2 id="heading3">四、数组变换</h2>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

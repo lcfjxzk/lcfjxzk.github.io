@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | 第22课 JS语法介绍</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="第22课 JS语法介绍" />
+<meta property="og:description" content="一、什么是表达式和语句 表达式
+1 &#43; 2; add(1, 2); console.log; console.log(3); 语句
+var a = 1;  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但 return 后面不能回车  二、标识符的规则 第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。
+var _ = 1; var $ = 2; var __ = 6; var 你好 = &#34;hi&#34;; 三、if else 语句  if(表达式){语句 1}else{语句 2}；  如果(表达式)为真，执行{语句 1}；
+如果(表达式)为假，执行{语句 2}；
+switch 语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式 1？表达式 2：表达式 3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/%E7%AC%AC22%E8%AF%BE-js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" />
+<meta property="article:published_time" content="2020-01-09T20:43:19+08:00" />
+<meta property="article:modified_time" content="2020-01-09T20:43:19+08:00" />
+<meta itemprop="name" content="第22课 JS语法介绍">
+<meta itemprop="description" content="一、什么是表达式和语句 表达式
+1 &#43; 2; add(1, 2); console.log; console.log(3); 语句
+var a = 1;  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但 return 后面不能回车  二、标识符的规则 第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。
+var _ = 1; var $ = 2; var __ = 6; var 你好 = &#34;hi&#34;; 三、if else 语句  if(表达式){语句 1}else{语句 2}；  如果(表达式)为真，执行{语句 1}；
+如果(表达式)为假，执行{语句 2}；
+switch 语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式 1？表达式 2：表达式 3">
+<meta itemprop="datePublished" content="2020-01-09T20:43:19&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-09T20:43:19&#43;08:00" />
+<meta itemprop="wordCount" content="127">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="第22课 JS语法介绍"/>
+<meta name="twitter:description" content="一、什么是表达式和语句 表达式
+1 &#43; 2; add(1, 2); console.log; console.log(3); 语句
+var a = 1;  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但 return 后面不能回车  二、标识符的规则 第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。
+var _ = 1; var $ = 2; var __ = 6; var 你好 = &#34;hi&#34;; 三、if else 语句  if(表达式){语句 1}else{语句 2}；  如果(表达式)为真，执行{语句 1}；
+如果(表达式)为假，执行{语句 2}；
+switch 语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式 1？表达式 2：表达式 3"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">第22课 JS语法介绍</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-01-09T20:43:19&#43;08:00">January 9, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="heading">一、什么是表达式和语句</h2>
+<p>表达式</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">3</span>);
+</code></pre></div><p>语句</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><ul>
+<li>值和返回值不一样</li>
+<li>大小写敏感</li>
+<li>大部分空格没有实际意义</li>
+<li>大部分回车没有实际意义，但 return 后面不能回车</li>
+</ul>
+<h2 id="heading1">二、标识符的规则</h2>
+<p>第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">__</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">你好</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hi&#34;</span>;
+</code></pre></div><h2 id="if-else-">三、if else 语句</h2>
+<ol>
+<li>if(表达式){语句 1}else{语句 2}；</li>
+</ol>
+<p>如果(表达式)为真，执行{语句 1}；</p>
+<p>如果(表达式)为假，执行{语句 2}；</p>
+<ol start="2">
+<li>switch 语句</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">fruit</span>){
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;banana&#34;</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+}
+</code></pre></div><ol start="3">
+<li>问号冒号表达式</li>
+</ol>
+<p>表达式 1？表达式 2：表达式 3</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">b</span>;
+</code></pre></div><ol start="4">
+<li>&amp;&amp;短路逻辑，&amp;读为 and</li>
+</ol>
+<p>A &amp;&amp; B &amp;&amp; C &amp;&amp; D 取第一个假值或 D
+不会取 true/false</p>
+<ol start="5">
+<li>||短路逻辑，“||”读为“或”</li>
+</ol>
+<p>A || B || C || D 取第一个真值或 D</p>
+<h2 id="while-for-">四、while for 语句</h2>
+<ol>
+<li>while 循环，当&hellip;时</li>
+</ol>
+<pre><code>while(表达式){语句}
+</code></pre><p>当表达式为真，执行语句，执行完再判断表达式真假。</p>
+<p>当表达式为假，执行后面的语句。</p>
+<ol start="2">
+<li>for 循环</li>
+</ol>
+<p>for 是 while 循环的方便写法</p>
+<pre><code>for(语句1;表达式2;语句3){
+  循环体
+}
+</code></pre><p>先执行语句 1，然后判断表达式 2，</p>
+<p>如果为真，执行循环体，然后执行语句 3
+如果为假，退出循环，执行后面的语句。</p>
+<h2 id="break-continue">五、break continue</h2>
+<p>break 退出所有循环</p>
+<p><img src="/image/break%E8%AF%AD%E5%8F%A5%E8%B7%B3%E5%87%BA%E5%BE%AA%E7%8E%AF.png" alt=""></p>
+<p>continue 退出当前一次循环</p>
+<p><img src="/image/continue%E8%AF%AD%E5%8F%A5%E8%B7%B3%E5%87%BA%E5%BD%93%E5%89%8D%E5%BE%AA%E7%8E%AF.png" alt=""></p>
+<h2 id="label">六、label</h2>
+<p><img src="/image/label%E8%AF%AD%E6%B3%95%EF%BC%9Afoo.png" alt=""></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
