@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/posts/" />
-<meta property="og:updated_time" content="2020-01-24T13:33:19+08:00" />
+<meta property="og:updated_time" content="2020-02-17T16:05:32+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -94,6 +94,199 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC27%E8%AF%BEjs%E5%87%BD%E6%95%B0/" class="link black dim">
+        第27课JS函数
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      二、JS函数作用域 例1
+function f1(){ let a =1 function f2(){ let a =2 console.log(a) } console.log(a) a=3 f2() } f1() 返回值
+1 2 例2
+function f1(){ let a =1 function f2(){ let a =2 function f3(){ console.log(a) } a=22 f3()//表示启动f3()但没有a的值，console.log(a)进入f2()  } console.log(a) a=100 f2() } f1() 返回值
+1 22 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC26%E8%AF%BEjs%E6%95%B0%E7%BB%84/" class="link black dim">
+        第26课JS数组
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、数组是什么 二、数组增删改查  增 删  删除头部元素
+arr.shift(); //arr被修改，并返回被删元素 删除尾部元素
+arr.pop(); //arr被修改，并返回被删元素 删除中间元素
+arr.splice(x, 1); //从x号元素开始，从左至右删除一个元素 arr.splice(x, 3); //从x号元素开始，从左至右删除三个元素 arr.splice(x, 1, &#34;z&#34;); //并在删除位置加入&#39;z&#39; arr.splice(x, 1, &#34;z&#34;, &#34;k&#34;); //并在删除位置加入&#39;z&#39;,&#39;k&#39;  改 查   查看所有属性名  let arr = [1, 2, 3, 4, 5]; arr.x = &#34;xxx&#34;; Object.keys(arr); for (let key in arr) { console.log(`${key}:${arr[key]}`); } for 循环是访问数组比较常见的形式。
+查看数字（字符串）属性名和值。
+查看单个属性  查找某个元素是否在数组里。
+arr.indexOf(item); //存在返回索引，否则返回-1 使用条件查找元素
+arr.find(item =&gt; item % 2 === 0); //找第一个偶数 使用条件查找元素的索引
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC25%E8%AF%BE-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/" class="link black dim">
+        第25课 JS对象分类
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC24%E8%AF%BE-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="link black dim">
+        第24课 JS对象基本用法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;'name' 也叫对象的属性名。
+键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
+值 value&ndash;&gt;'frank' 也叫对象的属性值。
+键值对&ndash;&gt;'name':'frank'
+Object.keys(obj)可以得到 obj 的所有 key。
+变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
+二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC22%E8%AF%BE-js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
+        第22课 JS语法介绍
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、什么是表达式和语句 表达式
+1 + 2; add(1, 2); console.log; console.log(3); 语句
+var a = 1;  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但 return 后面不能回车  二、标识符的规则 第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。
+var _ = 1; var $ = 2; var __ = 6; var 你好 = &#34;hi&#34;; 三、if else 语句  if(表达式){语句 1}else{语句 2}；  如果(表达式)为真，执行{语句 1}；
+如果(表达式)为假，执行{语句 2}；
+switch 语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式 1？表达式 2：表达式 3
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC19%E8%AF%BE-javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="link black dim">
+        第19课 JavaScript的诞生
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、网景公司和 sun 公司 1994 年，网景公司（Netscape）发布了 Navigator 浏览器 0.9 版。这是历史上第一个比较成熟的网络浏览器，轰动一时。但是，这个版本的浏览器只能用来浏览，不具备与访问者互动的能力。&hellip;&hellip;网景公司急需一种网页脚本语言，使得浏览器可以与网页互动。
+网景公司当时有两个选择：一个是采用现有的语言，比如 Perl、Python、Tcl、Scheme 等等，允许它们直接嵌入网页；另一个是发明一种全新的语言。
+就在这时，发生了另外一件大事：1995 年 Sun 公司将 Oak 语言改名为 Java，正式向市场推出。sun 公司大肆宣传 Java 会成为未来的主宰。
+网景公司与 Sun 公司结成联盟。因此，Javascript 后来就是网景和 Sun 两家公司一起携手推向市场的，这种语言被命名为&quot;Java+script&quot;并不是偶然的。
+二、34 岁的系统程序员 Brendan Eich 1995 年 4 月，网景公司录用了 34 岁的系统程序员 Brendan。Brendan Eich 的主要方向和兴趣是函数式编程，网景公司招聘他的目的，是研究将 Scheme 语言作为网页脚本语言的可能性。Brendan Eich 本人也是这样想的，以为进入新公司后，会主要与 Scheme 语言打交道。
+1995 年 5 月，网景公司做出决策，未来的网页脚本语言必须&quot;看上去与 Java 足够相似&rdquo;，但是比 Java 简单，使得非专业的网页作者也能很快上手。这个决策实际上将 Perl、Python、Tcl、Scheme 等非面向对象编程的语言都排除在外了。
+Brendan Eich 被指定为这种&quot;简化版 Java 语言&quot;的设计师。但是，他对 Java 一点兴趣也没有。为了应付公司安排的任务，他只用 10 天时间就把 Javascript 设计出来了。
+Javascript 设计思路如下：
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E6%B5%85%E6%9E%90url/" class="link black dim">
+        浅析URL
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、URL 包含哪几部分，每部分分别有什么作用 A Uniform Resource Locator。 例子：https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5
+ 协议 =&gt; https:// 域名 =&gt; www.baidu.com IP =&gt; 220.181.38.148 / 39.156.69.79（百度IP）  Internet Protocal。定位一台设备；封装数据报文，以跟其他设备交流。
+ 端口 =&gt; 一台服务器可以提供很多服务。每个服务对应一个号码，这个号码叫端口号port。  http服务最好用80端口（http://127.0.0.1:8080/文件名 本地电脑调试）
+https服务最好用443端口
+FTP服务（大学校园网用）最好用21端口
+一共有65535个端口。0~1023端口留给系统/管理员使用。其他端口给普通用户使用。比如http-server默认使用8080端口。一个端口如果被占用，你就只能换一个端口。 设置端口号：
+hs -c-1 -p 1200 就使用新的端口号来访问本地文件http://127.0.0.1:1200/index.html
+ 路径 =&gt; /s, 用来判断你要访问什么网页。 查询参数 =&gt; ?wd=hello&amp;rsv_spt=1，判断你要访问该网页的第几页 锚点 =&gt; 访问该页面的哪一块内容，实现文档内部的定位。  IP用来定位一个设备，端口用来定位一个设备的一个服务，有了IP和端口，我们就可以定位一个设备提供的服务。比如百度的设备提供的网页服务，腾讯的设备提供的聊天服务，或者淘宝的设备提供的支付服务。这些服务都可以通过IP和端口唯一确定。 IP和端口缺一不可。 二、IP 的作用是什么，ping 命令怎么用  Internet Protocal。 主要约定两件事：（1）定位一台设备；（2）封装数据报文，以跟其他设备交流。 外网IP：路由器对应一个外网IP，是电信分配给路由器的。（这里的外网指：你的路由器之外的网络），例如：58.51.255.38(查询ip138.com可以看到自己路由器分配的外网IP)，当路由器重启，会重新分配一个外网ip给你。 内网IP：路由器会在你家里创建一个内网，内网中的设备（电脑，手机，ipad）使用内网IP。这个IP的格式一般来说是/192.168.xxx.xxx/。  内网IP是路由器自己分配给自己的。一般路由器会给自己分配一个好记的内网IP/192.168.1.1/，路由器会给内网中的每一个设备分配一个内网IP，例如电脑是192.168.1.2，手机是192.168.1.3，以此类推。
+外网和内网是两个隔绝的空间，无法互通。唯一的联通点是路由器。所以路由器被叫做“网关”。
+http://192.168.1.58:8080/文件名 本地手机调试
+http://127.0.0.1:8080/文件名 本地电脑调试
+通过路径C:\Windows\System32\drivers\etc\hosts，以管理员身份打开hosts文件，加入一行代码
+127.0.0.1 xiongzk 可以改变调试网址为：http://xiongzk:8080/文件名
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="link black dim">
+        CSS知识总结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、CSS布局 布局是屏幕平面上的。   float布局
+  flex布局
+  一维布局用flex
+经验
+ 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
+https://css-tricks.com/snippets/css/complete-guide-grid/
+二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
+ 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
+ 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
+CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/" class="link black dim">
+        CSS盒模型是什么
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      CSS 盒模型(Box Model) 所有HTML元素可以看作盒子，在CSS中，&ldquo;box model&quot;这一术语是用来设计和布局时使用。 CSS盒模型本质上是一个盒子，封装周围的HTML元素，盒模型由外到内依次包括：
+ 边距（margin） 边框（border） 内边距（padding） 内容（content）  盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+两种盒模型  content-box  content-box width = 内容宽度
+ border-box  border-box width = 内容宽度 + padding + border
+border-box更好用。
+* { box-sizing: border-box; } 练习：
+http://js.jirengu.com/kuqowapere/3/edit?html,css,output
+margin合并  那些情况会合并   父元素、子元素margin合并 子元素之间margin合并  阻止margin合并   父子合并用padding/border挡住 父子合并用overflow:hidden挡住 父子合并用display：flex， 兄弟合并可用inline-block消除  基本长度单位  px 像素 em相对于自身font-size的倍数 百分数 整数  颜色  十六进制#FF6600 RGBA颜色rgb（0，0，0）或者（0，0，0，1） hsl颜色hsl（360，100%，100%）  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="https://xiongzhongke.xyz/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="link black dim">
         HTML常用标签
       </a>
@@ -104,57 +297,6 @@ yarn global add http-server yarn global add parcel 安装后，用命令
 http-server . -c-1 http-server -c-1 hs -c-1 或 parcel 文件名.html 来访问本地网页，不要双击HTML来访问自己本地的网页。
 a标签的href属性 网址 &lt;a href=&#34;//xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;https://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;超链接&lt;/a&gt; 路径 &lt;a href=&#34;/a/b/c.html&#34;&gt;我是C.html&lt;/a&gt; &lt;a href=&#34;./index.html&#34;&gt;我是index.html&lt;/a&gt; 伪协议 &lt;a href=&#34;javascript:;&#34;&gt;我要一个a标签，但什么也不做，不刷新也不置顶&lt;/a&gt; &lt;a href=&#34;#xzk&#34;&gt;自动跳转到&#34;id=xzk&#34;的p标签&lt;/a&gt; &lt;a href=&#34;mailto:775126135@qq.com&#34;&gt;发邮件给xzk&lt;/a&gt; &lt;a href=&#34;tel:15072026695&#34;&gt;打电话给我&lt;/a&gt; a标签的target属性 有_blank/_top/_parent/_self四个值
 &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_blank&#34;&gt;在空白页面打开指定网址&lt;/a&gt; &lt;body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_top&#34;&gt;有多个网页层层引用，在最顶层的网页打开指定网址&lt;/a&gt; &lt;div&gt; &lt;iframe src=&#34;我是引用的网页.html&#34;&gt; &lt;/iframe&gt; &lt;/div&gt; &lt;/body&gt; &lt;a href=&#34;http://xiongzhongke.xyz&#34; target=&#34;_parent&#34;&gt;有多个网页层层引用，在本网页的上一层网页打开指定网址&lt;/a&gt; &lt;a href=&#34;http://xiongzhongke.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="link black dim">
-        HTML入门笔记1
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.HTML 是谁发明的  Tim Berners-Lee，1990年发明。Tim Berners-Lee，1976年毕业于牛津大学物理系，1984年进入欧洲原子核研究会（CERN）粒子实验室工作。父母都是数学家，参与过世界上第一台商业电脑，曼切斯特1型（Manchester Mark I）的建造。2004年，英女皇伊丽莎白二世向Tim Berners-Lee颁发大英帝国爵级司令勋章。 李爵士发明html的初衷：为了使欧洲各国的核物理学家能通过计算机网络及时沟通传递信息进行合作研究。 如今Web之父Tim Berners-Lee已经功成名就。在www发明之初，tim预见到一旦他的浏览/编辑器问世，势必引起网络软件大战，使国际互联网陷入割据分裂，为了他所钟爱的WWW事业，他决定在WWW的百家争鸣中扮演一个技术直辖市的角色，而不是角逐财富的商人。与那些依托互联网一夜暴富之士相比，蒂姆仍然坚守在学术研究岗位上，那种视富贵如浮云的胸襟，真正表现了一个献身科学的学者风度。  2.HTML 起手应该写什么 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt; 3.常用的表章节的标签有哪些，分别是什么意思（h1~h6、section、article、main、aside 等等）  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  练习
-http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
-4.全局属性有哪些  class属性 用来对网页元素进行分类  &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：高圆圆&lt;/p&gt; &lt;p&gt;我最喜欢的演员：周星驰&lt;/p&gt; &lt;p class=&#34;xzkexgirlfriend&#34;&gt;我的前女友：新垣结衣&lt;/p&gt; 上面代码中，第一个&lt;p&gt;和第三个&lt;p&gt;是一类，因为它们的class属性相同。
- contenteditable属性 允许用户修改内容  &lt;p contenteditable=&#34;ture&#34;&gt; 鼠标点击，本句内容可以修改 &lt;/p&gt;  hidden属性 是一个布尔属性，表示当前网页元素不再跟页面相关，因此浏览器不会渲染这个元素。  &lt;p hidden&gt;本句不会显示在页面上。&lt;/p&gt;  id属性 是元素在网页内唯一的标识符，id属性值必须是全局唯一的，同一个页面不能有两个相同的id属性。  &lt;p id=&#34;xiongzhongke1&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke2&#34;&gt;&lt;/p&gt; &lt;p id=&#34;xiongzhongke3&#34;&gt;&lt;/p&gt; id属性的值不能包含空格
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
-        如何用hugo搭建个人博客
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      安装hugo 在官网上下载，并把hugo.exe路径放到PATH中
- brew install hugo hugo version    进入hugo官网，从step2开始抄代码，到step7，得到public目录
- hugo new site lcfjxzk.github.io-generator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/开博大吉.md #编辑博客内容 hugo server -D #Navigate to your new site at http://localhost:1313/. hugo -D #得到public目录    添加要写的博客，将内容部署到GitHub pages 上
- cd public git add . git commit -v git init git remote add origin git@github.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" class="link black dim">
-        开博大吉
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      大家好，我的博客开通了，希望我能写出好文章给大家看。
     </div>
   </div>
 </div>
@@ -196,12 +338,23 @@ http://js.jirengu.com/nudezijeyu/1/edit?html,js,output
     <li class="page-item active"><a class="page-link" href="/posts/page/2/">2</a></li>
     
     
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>

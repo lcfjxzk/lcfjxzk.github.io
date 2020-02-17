@@ -6,10 +6,125 @@
     <description>Recent content on 人中车可的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Fri, 24 Jan 2020 13:33:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 16:05:32 +0800</lastBuildDate>
     
 	<atom:link href="https://xiongzhongke.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JQuery学习总结</title>
+      <link>https://xiongzhongke.xyz/posts/jquery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 17 Feb 2020 16:05:32 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/jquery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
+      <description>内容来源：阮一峰的网络日志/jQuery设计思想
+http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html
+一、jQuery简介  jQuery是目前使用最广泛的javascript函数库。 jQuery设计模式：设计模式就是对通用代码取一个名字。 对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。 互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。 全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。  二、jQuery 如何获取元素 jQuery的基本设计思想和主要用法，就是&amp;quot;选择某个网页元素，然后对其进行某种操作&amp;rdquo;。这是它区别于其他Javascript库的根本特点。
+jQuery(&amp;#34;.test&amp;#34;) // 选择class为test的div元素 $(&amp;#39;div.myClass&amp;#39;) // 选择class为myClass的div元素 $(&amp;#39;div&amp;#39;).filter(&amp;#39;.myClass&amp;#39;); //选择class等于myClass的div元素 jQuery(&amp;#34;.test&amp;#34;).find(&amp;#34;.child&amp;#34;)//选择class为test的div元素的子元素中class为child的子元素 三、jQuery 的链式操作是怎样的 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&amp;#39;div&amp;#39;).find(&amp;#39;h3&amp;#39;).eq(2).html(&amp;#39;Hello&amp;#39;); 分解如下：
+$(&amp;#39;div&amp;#39;) //找到div元素 　.find(&amp;#39;h3&amp;#39;) //选择其中的h3元素 　.eq(2) //选择第3个h3元素 　.html(&amp;#39;Hello&amp;#39;); //将它的内容改为Hello jQuery还提供了.end()方法，使得结果集可以后退一步：
+$(&amp;#39;div&amp;#39;) .find(&amp;#39;h3&amp;#39;)//选择其中的h3元素 　.eq(2)//选择第3个h3元素 　.html(&amp;#39;Hello&amp;#39;)//将它的内容改为Hello 　.end() //退回到选中所有的h3元素的那一步 　.eq(0) //选中第一个h3元素 　.html(&amp;#39;World&amp;#39;); //将它的内容改为World 四、jQuery 如何创建元素 创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：
+$(&amp;#39;&amp;lt;p&amp;gt;Hello&amp;lt;/p&amp;gt;&amp;#39;); $(&amp;#39;&amp;lt;li class=&amp;#34;new&amp;#34;&amp;gt;new list item&amp;lt;/li&amp;gt;&amp;#39;); $(&amp;#39;ul&amp;#39;).append(&amp;#39;&amp;lt;li&amp;gt;list item&amp;lt;/li&amp;gt;&amp;#39;); 五、jQuery 如何移动元素 jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。
+方法1：是直接移动该元素。</description>
+    </item>
+    
+    <item>
+      <title>第35课DOM编程</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC35%E8%AF%BEdom%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 09 Feb 2020 09:18:29 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC35%E8%AF%BEdom%E7%BC%96%E7%A8%8B/</guid>
+      <description>一、DOM简介 DOM就是Document Object Model js用document操作网页。
+ jquery操作dom vue操作dom react操作dom  二、DOM的API 如何获取元素(Element/tag)的API。 获取的div等东西，都是一个对象。
+window.idxxx或者直接idxxx//这个大部分人不知道 //以下三种基本不用，除非要兼容IE document.getElementsByTagName(&amp;#39;div&amp;#39;) document.getElementsByTagName(&amp;#39;div&amp;#39;)[0] document.getElementsByClassName(&amp;#39;red&amp;#39;)[0] //------ document.querySelector(&amp;#39;#idxxx&amp;#39;) document.querySelectorAll(&amp;#39;.red&amp;#39;)[0] DOM的API都很长，不方便使用。但是必须要学，因为不学就看不懂jQuery，虚拟DOM等内容。
+元素的6层原型链 console.dir(div)//看元素的6层原型链 三、API增删改查 四、DOM操作跨线程 浏览器功能：
+ 渲染引擎：渲染HTML\CSS JS引擎：执行JS代码 以上两个引擎在不同的线程。  div1本来只能存在于内存里面，但是
+document.body.appendChild(div1) 让div1出现在了页面上。
+DOM很难用，怎么向面试官证明你会dom？  自己封装一个dom库 写一篇关于dom的博客  </description>
+    </item>
+    
+    <item>
+      <title>第34课数据结构1</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC34%E8%AF%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</link>
+      <pubDate>Thu, 06 Feb 2020 17:41:51 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC34%E8%AF%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</guid>
+      <description>沙盒编辑网址：https://codesandbox.io/s/vanilla </description>
+    </item>
+    
+    <item>
+      <title>20200203直播课</title>
+      <link>https://xiongzhongke.xyz/posts/20200203%E7%9B%B4%E6%92%AD%E8%AF%BE/</link>
+      <pubDate>Mon, 03 Feb 2020 20:40:29 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/20200203%E7%9B%B4%E6%92%AD%E8%AF%BE/</guid>
+      <description> typescript类型、泛型等概念的理解 赋值作用域 两个老师的课程表  https://mp.weixin.qq.com/s/mnQffXx7fqqwTmYXT5LABA?
+https://mp.weixin.qq.com/s/kX_cJY3vBhprmHTfxef8tw?
+现在的课程比以前的版本多了大约50%的内容  </description>
+    </item>
+    
+    <item>
+      <title>第33课排序算法  循环算法</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC33%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E5%BE%AA%E7%8E%AF%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 03 Feb 2020 16:56:26 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC33%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E5%BE%AA%E7%8E%AF%E7%AE%97%E6%B3%95/</guid>
+      <description>一、选择排序法：递归和循环 minIndex 重写&amp;ndash;&amp;gt;选择排序的循环写法：for 循环遍历 numbers //---第一步找到一组数中的最小数值 let minIndex = numbers =&amp;gt; { let index = 0; //把下标为0的第一个数记为index  for (let i = 1; i &amp;lt; numbers.length; i++) { //令i的初始值为1，即从下标为1的第二个数开始，如果i&amp;lt;数组长度，那么进入for循环，每次循环结束，i加1.  if (numbers[i] &amp;lt; numbers[index]) { //如果遍历的本轮数字比当前的index数字小  index = i; //那么把小的记为新的index(index可以看作一个变量)  } } //如果i超过了数组长度，跳出for循环，返回当前index  return index; //遍历numbers里面所有数，再返回index，即得到最小值的下标。 }; //---第二步将一组数从小到大排列 let sort = numbers =&amp;gt; { for (let i = 0; i &amp;lt; numbers.length - 1; i++) { //令i的初始值为0，即从下标为0的第一个数开始，如果i&amp;lt;数组长度-1，那么进入for循环，每次循环结束，i加1  console.</description>
+    </item>
+    
+    <item>
+      <title>第32课排序算法</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC32%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 03 Feb 2020 09:12:08 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC32%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description>一、排序算法的思路： 第一步，求出任意数组的最小值 Math.min; //找数组中的最小数，JS中内置了Math.min //首字母大写的一般是构造函数，如Object。但Math是一个特例。 如何理解递归思路  推荐书籍 SICP：计算机程序的构造和解释。 用代入法快速理解递归。 用调用栈快速理解递归。  析构赋值 let minOf2 = ([a, b]) =&amp;gt; (a &amp;lt; b ? a : b); let min = numbers =&amp;gt; { if (numbers.length &amp;gt; 2) { //当数组长度大于2时  return min([numbers[0], min(numbers.slice(1))]); //用第0个数和&amp;#39;除去第0个数的后面的一组数中的最小值&amp;#39;求最小值。  } else { //当数组长度为2时  return Math.min.apply(null, numbers); //调用函数Math.min,用apply把这组数展开，让min去调用。  } }; //上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。 上述代码就是递归，特点如下：  函数 min 不停调用自己，每次调用的参数略有不同。 当满足某个简单条件时，则实现一个简单的调用。  第二步，对任意数组从小到大排列 从 sort2/sort3/sort4 推出 sort 函数 sort3</description>
+    </item>
+    
+    <item>
+      <title>第31课算法与数据结构伪代码与流程图</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC31%E8%AF%BE%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BC%AA%E4%BB%A3%E7%A0%81%E4%B8%8E%E6%B5%81%E7%A8%8B%E5%9B%BE/</link>
+      <pubDate>Sun, 02 Feb 2020 12:09:50 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC31%E8%AF%BE%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BC%AA%E4%BB%A3%E7%A0%81%E4%B8%8E%E6%B5%81%E7%A8%8B%E5%9B%BE/</guid>
+      <description>一、伪代码与流程图 二、快速入门数据结构 推荐八种排序算法，把八种排序算法学会，基本上可以学会5-6种数据结构。有几种都是用的数组。 学会3-4种数据结构，基本上就可以面试了。
+三、算法 算法就是把你解决一个问题的思路表达出来。
+ </description>
+    </item>
+    
+    <item>
+      <title>30课JS总结</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC30%E8%AF%BEjs%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 30 Jan 2020 16:10:44 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC30%E8%AF%BEjs%E6%80%BB%E7%BB%93/</guid>
+      <description>知识点 基本概念 内存、变量、数据类型、对象
+控制语句 if&amp;hellip;else&amp;hellip;
+for&amp;hellip;
+对象  原型、原型链 对象分类 new一个新对象 构造函数 this的隐式传递和显式传递  难点：JS三座大山 原型、this、AJAX
+第一个重要知识：JS公式（不要理解，直接背诵） 对象.__proto__ === 其构造函数.prototype JS唯一公式，如果不会就套公式。
+第二个重要知识：根公理 Object.prototype是所有对象的(直接或间接)原型。
+所谓的公理，就是规定好的。
+第三个重要知识：函数公理 所有函数都是由Function构造的。
+把第一个公理和第三个公理结合起来，得到下面式子：
+任何函数.__proto __ === Function.prototype 任意函数有Object/Array/Function
+以上三个公理不容置疑，其他的都可以质疑。
+JS公式、根公理、函数公理，基于这三个知识和其他基础定义可以推出JS世界。 对象里面没有另一个对象，只有另一个对象的地址。
+Object.prototype.__proto__ === null//根据公式二 --&amp;gt; true </description>
+    </item>
+    
+    <item>
+      <title>第29课JS运算符&amp;前端面试题</title>
+      <link>https://xiongzhongke.xyz/posts/%E7%AC%AC29%E8%AF%BEjs%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Tue, 28 Jan 2020 16:26:33 +0800</pubDate>
+      
+      <guid>https://xiongzhongke.xyz/posts/%E7%AC%AC29%E8%AF%BEjs%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>一、需要记忆的特例（可能的前端面试题）  余数 x%7 ：-1 % 7 = -1 指数 x**3 自增自减x++/++x/x&amp;ndash;/&amp;ndash;x  var a = 1 a++ //值为1，值为++之前的值 ++a //值为2，值为++之后的值 ++ //让a加1 a++/a&amp;ndash;，a在前值为前； ++a/&amp;ndash;a，a在后值为后
+ 或且非  ||
+&amp;amp;&amp;amp;
+!
+ 求值运算符  var a = 8 +a //取a的值，a=8   负数运算符  var a = 8 -a //取a的负值，a=-8 注意：永远不要用&amp;quot;==&amp;quot;要用&amp;quot;===&amp;rdquo;（可参见真值表） &amp;ldquo;==&amp;quot;会自动类型转换，导致JS三位一体。 [] !== []//空数组不全等于空数组 {} !== {}//空对象不全等于空对象 NaN !== NaN 二、防御性编程（可选链语法）/布尔运算符  以防console不存在报错（console有可能被人改写）  console &amp;amp;&amp;amp; console.log &amp;amp;&amp;amp; console.log(&amp;#34;hi&amp;#34;) //如果前两个都成立，我就执行第三个 以下为明年最新的防御性编程语法</description>
+    </item>
     
     <item>
       <title>JS函数的执行时机</title>

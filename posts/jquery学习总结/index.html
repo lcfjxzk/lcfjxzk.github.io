@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | JQuery学习总结</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="JQuery学习总结" />
+<meta property="og:description" content="内容来源：阮一峰的网络日志/jQuery设计思想
+http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html
+一、jQuery简介  jQuery是目前使用最广泛的javascript函数库。 jQuery设计模式：设计模式就是对通用代码取一个名字。 对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。 互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。 全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。  二、jQuery 如何获取元素 jQuery的基本设计思想和主要用法，就是&quot;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+jQuery(&#34;.test&#34;) // 选择class为test的div元素 $(&#39;div.myClass&#39;) // 选择class为myClass的div元素 $(&#39;div&#39;).filter(&#39;.myClass&#39;); //选择class等于myClass的div元素 jQuery(&#34;.test&#34;).find(&#34;.child&#34;)//选择class为test的div元素的子元素中class为child的子元素 三、jQuery 的链式操作是怎样的 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&#39;div&#39;).find(&#39;h3&#39;).eq(2).html(&#39;Hello&#39;); 分解如下：
+$(&#39;div&#39;) //找到div元素 　.find(&#39;h3&#39;) //选择其中的h3元素 　.eq(2) //选择第3个h3元素 　.html(&#39;Hello&#39;); //将它的内容改为Hello jQuery还提供了.end()方法，使得结果集可以后退一步：
+$(&#39;div&#39;) .find(&#39;h3&#39;)//选择其中的h3元素 　.eq(2)//选择第3个h3元素 　.html(&#39;Hello&#39;)//将它的内容改为Hello 　.end() //退回到选中所有的h3元素的那一步 　.eq(0) //选中第一个h3元素 　.html(&#39;World&#39;); //将它的内容改为World 四、jQuery 如何创建元素 创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：
+$(&#39;&lt;p&gt;Hello&lt;/p&gt;&#39;); $(&#39;&lt;li class=&#34;new&#34;&gt;new list item&lt;/li&gt;&#39;); $(&#39;ul&#39;).append(&#39;&lt;li&gt;list item&lt;/li&gt;&#39;); 五、jQuery 如何移动元素 jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。
+方法1：是直接移动该元素。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/jquery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2020-02-17T16:05:32+08:00" />
+<meta property="article:modified_time" content="2020-02-17T16:05:32+08:00" />
+<meta itemprop="name" content="JQuery学习总结">
+<meta itemprop="description" content="内容来源：阮一峰的网络日志/jQuery设计思想
+http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html
+一、jQuery简介  jQuery是目前使用最广泛的javascript函数库。 jQuery设计模式：设计模式就是对通用代码取一个名字。 对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。 互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。 全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。  二、jQuery 如何获取元素 jQuery的基本设计思想和主要用法，就是&quot;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+jQuery(&#34;.test&#34;) // 选择class为test的div元素 $(&#39;div.myClass&#39;) // 选择class为myClass的div元素 $(&#39;div&#39;).filter(&#39;.myClass&#39;); //选择class等于myClass的div元素 jQuery(&#34;.test&#34;).find(&#34;.child&#34;)//选择class为test的div元素的子元素中class为child的子元素 三、jQuery 的链式操作是怎样的 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&#39;div&#39;).find(&#39;h3&#39;).eq(2).html(&#39;Hello&#39;); 分解如下：
+$(&#39;div&#39;) //找到div元素 　.find(&#39;h3&#39;) //选择其中的h3元素 　.eq(2) //选择第3个h3元素 　.html(&#39;Hello&#39;); //将它的内容改为Hello jQuery还提供了.end()方法，使得结果集可以后退一步：
+$(&#39;div&#39;) .find(&#39;h3&#39;)//选择其中的h3元素 　.eq(2)//选择第3个h3元素 　.html(&#39;Hello&#39;)//将它的内容改为Hello 　.end() //退回到选中所有的h3元素的那一步 　.eq(0) //选中第一个h3元素 　.html(&#39;World&#39;); //将它的内容改为World 四、jQuery 如何创建元素 创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：
+$(&#39;&lt;p&gt;Hello&lt;/p&gt;&#39;); $(&#39;&lt;li class=&#34;new&#34;&gt;new list item&lt;/li&gt;&#39;); $(&#39;ul&#39;).append(&#39;&lt;li&gt;list item&lt;/li&gt;&#39;); 五、jQuery 如何移动元素 jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。
+方法1：是直接移动该元素。">
+<meta itemprop="datePublished" content="2020-02-17T16:05:32&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-17T16:05:32&#43;08:00" />
+<meta itemprop="wordCount" content="141">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JQuery学习总结"/>
+<meta name="twitter:description" content="内容来源：阮一峰的网络日志/jQuery设计思想
+http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html
+一、jQuery简介  jQuery是目前使用最广泛的javascript函数库。 jQuery设计模式：设计模式就是对通用代码取一个名字。 对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。 互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。 全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。  二、jQuery 如何获取元素 jQuery的基本设计思想和主要用法，就是&quot;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+jQuery(&#34;.test&#34;) // 选择class为test的div元素 $(&#39;div.myClass&#39;) // 选择class为myClass的div元素 $(&#39;div&#39;).filter(&#39;.myClass&#39;); //选择class等于myClass的div元素 jQuery(&#34;.test&#34;).find(&#34;.child&#34;)//选择class为test的div元素的子元素中class为child的子元素 三、jQuery 的链式操作是怎样的 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&#39;div&#39;).find(&#39;h3&#39;).eq(2).html(&#39;Hello&#39;); 分解如下：
+$(&#39;div&#39;) //找到div元素 　.find(&#39;h3&#39;) //选择其中的h3元素 　.eq(2) //选择第3个h3元素 　.html(&#39;Hello&#39;); //将它的内容改为Hello jQuery还提供了.end()方法，使得结果集可以后退一步：
+$(&#39;div&#39;) .find(&#39;h3&#39;)//选择其中的h3元素 　.eq(2)//选择第3个h3元素 　.html(&#39;Hello&#39;)//将它的内容改为Hello 　.end() //退回到选中所有的h3元素的那一步 　.eq(0) //选中第一个h3元素 　.html(&#39;World&#39;); //将它的内容改为World 四、jQuery 如何创建元素 创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：
+$(&#39;&lt;p&gt;Hello&lt;/p&gt;&#39;); $(&#39;&lt;li class=&#34;new&#34;&gt;new list item&lt;/li&gt;&#39;); $(&#39;ul&#39;).append(&#39;&lt;li&gt;list item&lt;/li&gt;&#39;); 五、jQuery 如何移动元素 jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。
+方法1：是直接移动该元素。"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">JQuery学习总结</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-17T16:05:32&#43;08:00">February 17, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>内容来源：阮一峰的网络日志/jQuery设计思想</p>
+<p><a href="http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html">http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html</a></p>
+<h2 id="jquery">一、jQuery简介</h2>
+<ul>
+<li>jQuery是目前使用最广泛的javascript函数库。</li>
+<li>jQuery设计模式：设计模式就是对通用代码取一个名字。</li>
+<li>对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。</li>
+<li>互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。</li>
+<li>全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。</li>
+</ul>
+<h2 id="jquery-">二、jQuery 如何获取元素</h2>
+<p>jQuery的基本设计思想和主要用法，就是&quot;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">jQuery</span>(<span style="color:#e6db74">&#34;.test&#34;</span>) <span style="color:#75715e">// 选择class为test的div元素
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div.myClass&#39;</span>) <span style="color:#75715e">// 选择class为myClass的div元素
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>).<span style="color:#a6e22e">filter</span>(<span style="color:#e6db74">&#39;.myClass&#39;</span>); <span style="color:#75715e">//选择class等于myClass的div元素
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">jQuery</span>(<span style="color:#e6db74">&#34;.test&#34;</span>).<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;.child&#34;</span>)<span style="color:#75715e">//选择class为test的div元素的子元素中class为child的子元素
+</span></code></pre></div><h2 id="jquery-1">三、jQuery 的链式操作是怎样的</h2>
+<p>jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>).<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;h3&#39;</span>).<span style="color:#a6e22e">eq</span>(<span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>);
+</code></pre></div><p>分解如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>) <span style="color:#75715e">//找到div元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;h3&#39;</span>) <span style="color:#75715e">//选择其中的h3元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">eq</span>(<span style="color:#ae81ff">2</span>) <span style="color:#75715e">//选择第3个h3元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>); <span style="color:#75715e">//将它的内容改为Hello
+</span></code></pre></div><p>jQuery还提供了.end()方法，使得结果集可以后退一步：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>)
+　　　.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;h3&#39;</span>)<span style="color:#75715e">//选择其中的h3元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">eq</span>(<span style="color:#ae81ff">2</span>)<span style="color:#75715e">//选择第3个h3元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>)<span style="color:#75715e">//将它的内容改为Hello
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">end</span>() <span style="color:#75715e">//退回到选中所有的h3元素的那一步
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">eq</span>(<span style="color:#ae81ff">0</span>) <span style="color:#75715e">//选中第一个h3元素
+</span><span style="color:#75715e"></span>　　　.<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">&#39;World&#39;</span>); <span style="color:#75715e">//将它的内容改为World
+</span></code></pre></div><h2 id="jquery-2">四、jQuery 如何创建元素</h2>
+<p>创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;&lt;p&gt;Hello&lt;/p&gt;&#39;</span>);
+<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;&lt;li class=&#34;new&#34;&gt;new list item&lt;/li&gt;&#39;</span>);
+<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;ul&#39;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;&lt;li&gt;list item&lt;/li&gt;&#39;</span>);
+</code></pre></div><h2 id="jquery-3">五、jQuery 如何移动元素</h2>
+<p>jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。</p>
+<p>方法1：是直接移动该元素。</p>
+<p>方法2：是移动其他元素，使得目标元素达到我们想要的位置。
+假定我们选中了一个div元素，需要把它移动到p元素后面。</p>
+<p>第一种方法是使用.insertAfter()，把div元素移动p元素后面：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>).<span style="color:#a6e22e">insertAfter</span>(<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;p&#39;</span>));
+</code></pre></div><p>第二种方法是使用.after()，把p元素加到div元素前面：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;p&#39;</span>).<span style="color:#a6e22e">after</span>(<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;div&#39;</span>));
+</code></pre></div><p>表面上看，这两种方法的效果是一样的，唯一的不同似乎只是操作视角的不同。但是实际上，它们有一个重大差别，那就是返回的元素不一样。第一种方法返回div元素，第二种方法返回p元素。你可以根据需要，选择到底使用哪一种方法。</p>
+<p>使用这种模式的操作方法，一共有四对：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//.insertAfter()和.after()：在现存元素的外部，从后面插入元素
+</span><span style="color:#75715e"></span><span style="color:#75715e">//.insertBefore()和.before()：在现存元素的外部，从前面插入元素
+</span><span style="color:#75715e"></span><span style="color:#75715e">//.appendTo()和.append()：在现存元素的内部，从后面插入元素
+</span><span style="color:#75715e"></span><span style="color:#75715e">//.prependTo()和.prepend()：在现存元素的内部，从前面插入元素
+</span></code></pre></div><h2 id="jquery-4">六、jQuery 如何修改元素的属性</h2>
+<p>操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。
+jQuery设计思想之四，就是使用同一个函数，来完成取值（getter）和赋值（setter），即&quot;取值器&quot;与&quot;赋值器&quot;合一。到底是取值还是赋值，由函数的参数决定。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;h1&#39;</span>).<span style="color:#a6e22e">html</span>(); <span style="color:#75715e">//html()没有参数，表示取出h1的值
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;h1&#39;</span>).<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">&#39;Hello&#39;</span>); <span style="color:#75715e">//html()有参数Hello，表示对h1进行赋值
+</span></code></pre></div><p>常见的取值和赋值函数如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">.<span style="color:#a6e22e">html</span>() <span style="color:#75715e">//取出或设置html内容
+</span><span style="color:#75715e"></span>
+.<span style="color:#a6e22e">text</span>() <span style="color:#75715e">//取出或设置text内容
+</span><span style="color:#75715e"></span>
+.<span style="color:#a6e22e">attr</span>() <span style="color:#75715e">//取出或设置某个属性的值
+</span><span style="color:#75715e"></span>
+.<span style="color:#a6e22e">width</span>() <span style="color:#75715e">//取出或设置某个元素的宽度
+</span><span style="color:#75715e"></span>
+.<span style="color:#a6e22e">height</span>() <span style="color:#75715e">//取出或设置某个元素的高度
+</span><span style="color:#75715e"></span>
+.<span style="color:#a6e22e">val</span>() <span style="color:#75715e">//取出某个表单元素的值
+</span></code></pre></div><p>需要注意的是，如果结果集包含多个元素，那么赋值的时候，将对其中所有的元素赋值；取值的时候，则是只取出第一个元素的值（.text()例外，它取出所有元素的text内容）。</p>
+<h2 id="heading">封装</h2>
+<p>把一个变量，放在我的函数里面，然后暴露出一个api，这个api可以操作这个变量，这就叫做封装。
+封装的意义是变量被封装。</p>
+<h2 id="jquery-5">jQuery 都过时了，那我还学它干嘛？</h2>
+<ol>
+<li>
+<p>jQuery 还是可以学一学的，学了之后对写代码和封装库很有帮助。</p>
+</li>
+<li>
+<p>现在的「新人」依然可以学习 jQuery 的思想，因为以「新人」的水平，直接理解 Vue / React 的思想难度较大，jQuery 是一个很不错的中间过渡，因为 jQuery 也蕴含了非常多的编程套路。</p>
+</li>
+<li>
+<p>但是如果你不想学，就不学吧。直接去学 Vue / React 会难一点，但也能学会。</p>
+</li>
+</ol>
+<h2 id="jquery1">完全理解jQuery源代码，在前端行业算什么水平？</h2>
+<p>说明你</p>
+<ol>
+<li>精通正则表达式</li>
+<li>了解闭包</li>
+<li>了解原型链</li>
+<li>精通 DOM API</li>
+<li>了解各种设计模式（事件、Promise、伪重载、装饰器模式等）</li>
+<li>精通 DOM 事件</li>
+<li>了解旧浏览器的各种特性（bug）</li>
+<li>了解模块化</li>
+<li>了解浏览器渲染原理</li>
+<li>精通 AJAX</li>
+<li>了解 HTTP 请求</li>
+</ol>
+<p>可以秒杀中国 80% 的前端</p>
+<p>来源于方应杭的文章：
+<a href="https://fangyinghang.com/why-still-jquery/">https://fangyinghang.com/why-still-jquery/</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | 第32课排序算法</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="第32课排序算法" />
+<meta property="og:description" content="一、排序算法的思路： 第一步，求出任意数组的最小值 Math.min; //找数组中的最小数，JS中内置了Math.min //首字母大写的一般是构造函数，如Object。但Math是一个特例。 如何理解递归思路  推荐书籍 SICP：计算机程序的构造和解释。 用代入法快速理解递归。 用调用栈快速理解递归。  析构赋值 let minOf2 = ([a, b]) =&gt; (a &lt; b ? a : b); let min = numbers =&gt; { if (numbers.length &gt; 2) { //当数组长度大于2时  return min([numbers[0], min(numbers.slice(1))]); //用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。  } else { //当数组长度为2时  return Math.min.apply(null, numbers); //调用函数Math.min,用apply把这组数展开，让min去调用。  } }; //上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。 上述代码就是递归，特点如下：  函数 min 不停调用自己，每次调用的参数略有不同。 当满足某个简单条件时，则实现一个简单的调用。  第二步，对任意数组从小到大排列 从 sort2/sort3/sort4 推出 sort 函数 sort3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/%E7%AC%AC32%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" />
+<meta property="article:published_time" content="2020-02-03T09:12:08+08:00" />
+<meta property="article:modified_time" content="2020-02-03T09:12:08+08:00" />
+<meta itemprop="name" content="第32课排序算法">
+<meta itemprop="description" content="一、排序算法的思路： 第一步，求出任意数组的最小值 Math.min; //找数组中的最小数，JS中内置了Math.min //首字母大写的一般是构造函数，如Object。但Math是一个特例。 如何理解递归思路  推荐书籍 SICP：计算机程序的构造和解释。 用代入法快速理解递归。 用调用栈快速理解递归。  析构赋值 let minOf2 = ([a, b]) =&gt; (a &lt; b ? a : b); let min = numbers =&gt; { if (numbers.length &gt; 2) { //当数组长度大于2时  return min([numbers[0], min(numbers.slice(1))]); //用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。  } else { //当数组长度为2时  return Math.min.apply(null, numbers); //调用函数Math.min,用apply把这组数展开，让min去调用。  } }; //上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。 上述代码就是递归，特点如下：  函数 min 不停调用自己，每次调用的参数略有不同。 当满足某个简单条件时，则实现一个简单的调用。  第二步，对任意数组从小到大排列 从 sort2/sort3/sort4 推出 sort 函数 sort3">
+<meta itemprop="datePublished" content="2020-02-03T09:12:08&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-03T09:12:08&#43;08:00" />
+<meta itemprop="wordCount" content="451">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="第32课排序算法"/>
+<meta name="twitter:description" content="一、排序算法的思路： 第一步，求出任意数组的最小值 Math.min; //找数组中的最小数，JS中内置了Math.min //首字母大写的一般是构造函数，如Object。但Math是一个特例。 如何理解递归思路  推荐书籍 SICP：计算机程序的构造和解释。 用代入法快速理解递归。 用调用栈快速理解递归。  析构赋值 let minOf2 = ([a, b]) =&gt; (a &lt; b ? a : b); let min = numbers =&gt; { if (numbers.length &gt; 2) { //当数组长度大于2时  return min([numbers[0], min(numbers.slice(1))]); //用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。  } else { //当数组长度为2时  return Math.min.apply(null, numbers); //调用函数Math.min,用apply把这组数展开，让min去调用。  } }; //上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。 上述代码就是递归，特点如下：  函数 min 不停调用自己，每次调用的参数略有不同。 当满足某个简单条件时，则实现一个简单的调用。  第二步，对任意数组从小到大排列 从 sort2/sort3/sort4 推出 sort 函数 sort3"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">第32课排序算法</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-03T09:12:08&#43;08:00">February 3, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="heading">一、排序算法的思路：</h2>
+<h3 id="heading1">第一步，求出任意数组的最小值</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Math.<span style="color:#a6e22e">min</span>;
+<span style="color:#75715e">//找数组中的最小数，JS中内置了Math.min
+</span><span style="color:#75715e"></span><span style="color:#75715e">//首字母大写的一般是构造函数，如Object。但Math是一个特例。
+</span></code></pre></div><h3 id="heading2">如何理解递归思路</h3>
+<ul>
+<li>推荐书籍 SICP：计算机程序的构造和解释。</li>
+<li>用代入法快速理解递归。</li>
+<li>用调用栈快速理解递归。</li>
+</ul>
+<h2 id="heading3">析构赋值</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minOf2</span> <span style="color:#f92672">=</span> ([<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>]) =&gt; (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">b</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#75715e">//当数组长度大于2时
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]); <span style="color:#75715e">//用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">//当数组长度为2时
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>); <span style="color:#75715e">//调用函数Math.min,用apply把这组数展开，让min去调用。
+</span><span style="color:#75715e"></span>  }
+};
+<span style="color:#75715e">//上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。
+</span></code></pre></div><h3 id="heading4">上述代码就是递归，特点如下：</h3>
+<ol>
+<li>函数 min 不停调用自己，每次调用的参数略有不同。</li>
+<li>当满足某个简单条件时，则实现一个简单的调用。</li>
+</ol>
+<h3 id="heading5">第二步，对任意数组从小到大排列</h3>
+<h3 id="-sort2sort3sort4--sort-">从 sort2/sort3/sort4 推出 sort 函数</h3>
+<p>sort3</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">sort3</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span>];
+<span style="color:#75715e">//numbers指数组
+</span><span style="color:#75715e"></span><span style="color:#75715e">//index指数字的下标
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>); <span style="color:#75715e">//拿到最小数字的下标
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>]; <span style="color:#75715e">//拿到最小数字
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
+  <span style="color:#75715e">// 从numbers里面删掉最小的数字min
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min</span>].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">sort2</span>(<span style="color:#a6e22e">numbers</span>));
+};
+<span style="color:#75715e">//返回min+删掉min的numbers数组的排序
+</span><span style="color:#75715e"></span><span style="color:#75715e">//sort3实际上是调用了min和sort2
+</span></code></pre></div><p>sort4</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">sort4</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">d</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>);
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>];
+  <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
+  <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min</span>].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">sort3</span>(<span style="color:#a6e22e">numbers</span>));
+};
+<span style="color:#75715e">//sort4实际上是调用了min和sort3
+</span></code></pre></div><p>sort</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#75715e">//如果数组长度大于2
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>); <span style="color:#75715e">//拿到最小数字的下标
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>]; <span style="color:#75715e">//拿到最小数字
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">//从numbers里面删掉最小的数字min，从第1个下标切出子数组。
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min</span>].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">numbers</span>)); <span style="color:#75715e">//返回min+剩余数组
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">//如果数组长度小于等于2
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reverse</span>(); <span style="color:#75715e">//如果数字0小于数字1，则返回[0 , 1],否则返回[1 , 0]
+</span><span style="color:#75715e"></span>  }
+};
+<span style="color:#75715e">//用代入法看看sort([12,5,8,7,9])
+</span></code></pre></div><h2 id="heading6">二、如何查看报错记录</h2>
+<p><img src="/image/sort%E4%BB%A3%E5%85%A5%E6%9F%A5%E7%9C%8B%E6%8A%A5%E9%94%99.png" alt=""></p>
+<p><img src="/image/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95.png" alt=""></p>
+<p>minIndex 没有定义</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">VM175</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span> <span style="color:#a6e22e">Uncaught</span> <span style="color:#a6e22e">ReferenceError</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">defined</span>
+    <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">sort</span> (<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">anonymous</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">13</span>)
+    <span style="color:#a6e22e">at</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">anonymous</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>min 没有定义。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">VM185</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span> <span style="color:#a6e22e">Uncaught</span> <span style="color:#a6e22e">ReferenceError</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">min</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">defined</span>
+    <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">minIndex</span> (<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">anonymous</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">9</span>) <span style="color:#75715e">//minIndex函数调用了min函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">sort</span> (<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">anonymous</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">13</span>) <span style="color:#75715e">// sort函数调用了minIndex函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">at</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">anonymous</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">//匿名函数调用了sort函数
+</span></code></pre></div><h2 id="heading7">以上层层调用的过程就是函数调用栈。</h2>
+<h2 id="-log--rest-">通过 log 推理出 rest 出了问题</h2>
+<p><img src="/image/%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81.png" alt=""></p>
+<ol>
+<li>第一个 log 结果是对的，第二个 log 结果是错的，那么造成错误的原因一定是两个 log 中间的那一句。
+因为 splice 会改变数组本身，所以是不需要这个 rest</li>
+<li>通过多练习 debug，通过 log 找出 bug 在那里，获取经验值。</li>
+<li>一定要不停的经过加 log，发现 bug，改 bug，再加 log，再改 bug，不停循环，等你把所有的 bug 都试过了，你就是大师。</li>
+</ol>
+<h2 id="heading8">三、课后习题</h2>
+<p>第 1 题
+请写一个 min 函数，要求 min(numbers) 能返回数组 numbers 中的最小数字。</p>
+<h2 id="heading9">()对象</h2>
+<h2 id="heading10">[]数组</h2>
+<h2 id="heading11"></h2>
+<p>参考答案</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>);
+  }
+};
+</code></pre></div><p>其他学生的回答</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>]);
+  }
+};
+</code></pre></div><p>第 2 题
+请写出一个 sort 函数，要求 sort(numbers) 能返回一个把 numbers 从小到大排列的数组（你可以添加多余的帮助函数）</p>
+<p>参考答案</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>);
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>)); <span style="color:#75715e">//定义函数minIndex最小数字的下标
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>];
+    <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min</span>].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">numbers</span>));
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reverse</span>();
+  }
+};
+</code></pre></div><p>其他学生的答案</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>]);
+  }
+};
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>));
+<span style="color:#75715e">// console.log(minIndex([50, 2, 6]));
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;index:&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">index</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>];
+    <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span>, <span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min</span>].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">numbers</span>));
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reverse</span>();
+  }
+};
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sort</span>([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>]));
+</code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

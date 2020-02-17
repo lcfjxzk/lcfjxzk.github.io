@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>人中车可的博客  | 第33课排序算法  循环算法</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.60.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="第33课排序算法  循环算法" />
+<meta property="og:description" content="一、选择排序法：递归和循环 minIndex 重写&ndash;&gt;选择排序的循环写法：for 循环遍历 numbers //---第一步找到一组数中的最小数值 let minIndex = numbers =&gt; { let index = 0; //把下标为0的第一个数记为index  for (let i = 1; i &lt; numbers.length; i&#43;&#43;) { //令i的初始值为1，即从下标为1的第二个数开始，如果i&lt;数组长度，那么进入for循环，每次循环结束，i加1.  if (numbers[i] &lt; numbers[index]) { //如果遍历的本轮数字比当前的index数字小  index = i; //那么把小的记为新的index(index可以看作一个变量)  } } //如果i超过了数组长度，跳出for循环，返回当前index  return index; //遍历numbers里面所有数，再返回index，即得到最小值的下标。 }; //---第二步将一组数从小到大排列 let sort = numbers =&gt; { for (let i = 0; i &lt; numbers.length - 1; i&#43;&#43;) { //令i的初始值为0，即从下标为0的第一个数开始，如果i&lt;数组长度-1，那么进入for循环，每次循环结束，i加1  console." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongzhongke.xyz/posts/%E7%AC%AC33%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E5%BE%AA%E7%8E%AF%E7%AE%97%E6%B3%95/" />
+<meta property="article:published_time" content="2020-02-03T16:56:26+08:00" />
+<meta property="article:modified_time" content="2020-02-03T16:56:26+08:00" />
+<meta itemprop="name" content="第33课排序算法  循环算法">
+<meta itemprop="description" content="一、选择排序法：递归和循环 minIndex 重写&ndash;&gt;选择排序的循环写法：for 循环遍历 numbers //---第一步找到一组数中的最小数值 let minIndex = numbers =&gt; { let index = 0; //把下标为0的第一个数记为index  for (let i = 1; i &lt; numbers.length; i&#43;&#43;) { //令i的初始值为1，即从下标为1的第二个数开始，如果i&lt;数组长度，那么进入for循环，每次循环结束，i加1.  if (numbers[i] &lt; numbers[index]) { //如果遍历的本轮数字比当前的index数字小  index = i; //那么把小的记为新的index(index可以看作一个变量)  } } //如果i超过了数组长度，跳出for循环，返回当前index  return index; //遍历numbers里面所有数，再返回index，即得到最小值的下标。 }; //---第二步将一组数从小到大排列 let sort = numbers =&gt; { for (let i = 0; i &lt; numbers.length - 1; i&#43;&#43;) { //令i的初始值为0，即从下标为0的第一个数开始，如果i&lt;数组长度-1，那么进入for循环，每次循环结束，i加1  console.">
+<meta itemprop="datePublished" content="2020-02-03T16:56:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-03T16:56:26&#43;08:00" />
+<meta itemprop="wordCount" content="653">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="第33课排序算法  循环算法"/>
+<meta name="twitter:description" content="一、选择排序法：递归和循环 minIndex 重写&ndash;&gt;选择排序的循环写法：for 循环遍历 numbers //---第一步找到一组数中的最小数值 let minIndex = numbers =&gt; { let index = 0; //把下标为0的第一个数记为index  for (let i = 1; i &lt; numbers.length; i&#43;&#43;) { //令i的初始值为1，即从下标为1的第二个数开始，如果i&lt;数组长度，那么进入for循环，每次循环结束，i加1.  if (numbers[i] &lt; numbers[index]) { //如果遍历的本轮数字比当前的index数字小  index = i; //那么把小的记为新的index(index可以看作一个变量)  } } //如果i超过了数组长度，跳出for循环，返回当前index  return index; //遍历numbers里面所有数，再返回index，即得到最小值的下标。 }; //---第二步将一组数从小到大排列 let sort = numbers =&gt; { for (let i = 0; i &lt; numbers.length - 1; i&#43;&#43;) { //令i的初始值为0，即从下标为0的第一个数开始，如果i&lt;数组长度-1，那么进入for循环，每次循环结束，i加1  console."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://xiongzhongke.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      人中车可的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">第33课排序算法  循环算法</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-03T16:56:26&#43;08:00">February 3, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="heading">一、选择排序法：递归和循环</h2>
+<h2 id="minindex-for--numbers">minIndex 重写&ndash;&gt;选择排序的循环写法：for 循环遍历 numbers</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//---第一步找到一组数中的最小数值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//把下标为0的第一个数记为index
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#75715e">//令i的初始值为1，即从下标为1的第二个数开始，如果i&lt;数组长度，那么进入for循环，每次循环结束，i加1.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>]) {
+      <span style="color:#75715e">//如果遍历的本轮数字比当前的index数字小
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>; <span style="color:#75715e">//那么把小的记为新的index(index可以看作一个变量)
+</span><span style="color:#75715e"></span>    }
+  } <span style="color:#75715e">//如果i超过了数组长度，跳出for循环，返回当前index
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">index</span>; <span style="color:#75715e">//遍历numbers里面所有数，再返回index，即得到最小值的下标。
+</span><span style="color:#75715e"></span>};
+<span style="color:#75715e">//---第二步将一组数从小到大排列
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#75715e">//令i的初始值为0，即从下标为0的第一个数开始，如果i&lt;数组长度-1，那么进入for循环，每次循环结束，i加1
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">----</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// 这个log很精髓，将每次for循环隔开，以便观察下面的log。
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">i: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">i</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//打印出字符串&#39;i:&#39;和当前数值i。
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">i</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>;
+    <span style="color:#75715e">// index是当前最小数的下标
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// index对应的数应该放到i处。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//让最小数字下标index等于“切除掉第i个数之后剩余数组中的最小数字下标”+i
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//为什么要+i，因为slice切除效果会改变剩余数组的原始下标，为了保证它们的原始下标不变，所以+i
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">index: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//打印出字符串&#39;index:&#39;和当前数值index。
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">min: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//打印出字符串&#39;min:&#39;和本轮筛选出的最小数值numbers[index]。
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">index</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">i</span>) {
+      <span style="color:#75715e">//如果当前最小数字下标不等于数组遍历本轮数字下标。
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">i</span>); <span style="color:#75715e">//就调换numbers[index]和numbers[i]
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//省略了else部分。--&gt;如果当前最小数字下标等于新的数字下标，那么什么也不做。
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">swap </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">i</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//打印出字符串&#39;swap&#39; &#39;当前最小数字下标index&#39;:&#39;最新的数字下标i&#39;。表明我调换了numbers[index]和numbers[i]。
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//console.log(numbers); //打印出数组。
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#75715e">// swap还没实现。假设swap已经写好，便于理顺整体思路
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// index、i都是index的意思，建议i改名。
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>; <span style="color:#75715e">//返回数组。
+</span><span style="color:#75715e"></span>};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">swap</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>) =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>];
+  <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">j</span>];
+  <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>;
+}; <span style="color:#75715e">//swap函数，将下标为i和j的两个数交换位置。
+</span></code></pre></div><p>sort 测试：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">sort</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">199</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">93</span>, <span style="color:#ae81ff">124</span>, <span style="color:#ae81ff">4903</span>, <span style="color:#ae81ff">4</span>]);
+</code></pre></div><p>![](/image/minIndex for 循环.png)</p>
+<p>![](/image/minIndex for 循环测试结果.png)</p>
+<h2 id="if-else-">对比之前的代码&ndash;&gt;递归代码：if else 语句</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//---第一步找到一组数中的最小数值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>));
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+    <span style="color:#75715e">//当数组长度大于2时
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">min</span>([<span style="color:#a6e22e">numbers</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))]); <span style="color:#75715e">//用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">//当数组长度为2时
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>); <span style="color:#75715e">//调用函数Math.min,用apply把这组数展开，让min去调用。
+</span><span style="color:#75715e"></span>  }
+};
+<span style="color:#75715e">//上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。
+</span></code></pre></div><p>![](/image/minIndex if else 递归.png)</p>
+<h2 id="heading1">二、快速排序算法</h2>
+<p>快速排序法的特点是&ndash;&gt;快</p>
+<p>如下为阮一峰版本的代码经过方应航加工，变成了ES6。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//每一次循环，arr.length都会变化。
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">quickSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt; {<span style="color:#75715e">//让quickSort等于一个数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>; }<span style="color:#75715e">//当数组长度&lt;=1时，返回数组本身即可（因为只有一项或空数组）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivotIndex</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);<span style="color:#75715e">//让pivotIndex=数组中间的那个数字的下标
+</span><span style="color:#75715e"></span><span style="color:#75715e">//几个概念：pivotIndex--基准的下标（索引）
+</span><span style="color:#75715e"></span><span style="color:#75715e">//Math.floor--往下找一个最靠近的整数。例如：Math.floor(3.5)=3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">pivotIndex</span>, <span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>];
+<span style="color:#75715e">//arr.splice(pivotIndex, n)的含义：将数组arr从下标为pivotIndex的数开始向后截取n项，得到一个截取的新数组。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//arr.splice(pivotIndex, n)[0]的含义：将数组arr从下标为pivotIndex的数开始向后截取n项，得到一个截取的新数组，并取出新数组中下标为0的数字。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//令pivot(基准数字) = 这个新数组中下标为0的数字。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//即令pivot(基准数字)=arr数组最中间的那个数。
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> [];<span style="color:#75715e">//让left = 一个空数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> [];<span style="color:#75715e">//让right = 一个空数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){<span style="color:#75715e">//从第0项开始，遍历数组arr中的每一项
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">pivot</span>) { <span style="color:#a6e22e">left</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])<span style="color:#75715e">//如果第i项数字&lt;基准数字，就把第i项数字放到left空数组即左边的空数组。
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> { <span style="color:#a6e22e">right</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]) }<span style="color:#75715e">//如果第i项数字&gt;基准数字，就把第i项数字放到right空数组即右边的空数组。
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">left</span>).<span style="color:#a6e22e">concat</span>(
+[<span style="color:#a6e22e">pivot</span>], <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">right</span>) )
+}<span style="color:#75715e">//返回左边的数组+基准数+右边的数组
+</span><span style="color:#75715e"></span><span style="color:#75715e">//从第0项开始，遍历数组arr中的每一项，经过n次循环后，最后一次循环后返回的即为最终的数组。
+</span></code></pre></div><h2 id="api">算法最好用伪代码写，这样就不用纠结API的问题。</h2>
+<h2 id="heading2">三、归并排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mergeSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt;{
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#75715e">//让k=数组的长度
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">===</span><span style="color:#ae81ff">1</span>){<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>}<span style="color:#75715e">//如果数组长度等于1，则返回数组本身。
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))
+<span style="color:#75715e">//截取从第0项到第Math.floor(k/2)项作为左边的数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))
+<span style="color:#75715e">//截取从第Math.floor(k/2)项到最后一项作为右边的数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">mergeSort</span>(<span style="color:#a6e22e">left</span>), <span style="color:#a6e22e">mergeSort</span>(<span style="color:#a6e22e">right</span>))
+}
+<span style="color:#75715e">//merge算法的核心在于merge部分---以下---
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">merge</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt;{
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span><span style="color:#75715e">//如果a为空数组，则返回b
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#75715e">//如果b为空数组，则返回a
+</span><span style="color:#75715e"></span><span style="color:#75715e">//---?:语句---
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">?</span><span style="color:#75715e">//如果a数组的第一项&gt;b数组的第一项
+</span><span style="color:#75715e"></span>[<span style="color:#a6e22e">b</span>[<span style="color:#ae81ff">0</span>]].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))) <span style="color:#f92672">:</span><span style="color:#75715e">//那么就返回b数组的第一项+对后面的&#34;a数组+截取b数组从第2项到最后一项&#34;进行merge。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//b.slice(1)表示截取b数组从第1项到最后一项。
+</span><span style="color:#75715e"></span>[<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>]].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>), <span style="color:#a6e22e">b</span>))<span style="color:#75715e">//否则(如果a数组的第一项&lt;b数组的第一项)，那么就返回a数组的第一项+对后面的&#34;截取a数组从第2项到最后一项+b数组&#34;进行merge。
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="mergemergekmergemergenullmergek--arrlength">简单一句话总结:merge套merge，经过k次merge（最后一次merge是一个数与null进行merge），得到最后的数组。（k = arr.length）</h2>
+<h2 id="heading3">四、比前面三种都快的排序&ndash;计数排序</h2>
+<p>计数排序需要用到一个额外的数据结构&ndash;哈希表</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//hashTable是哈希表中的key，以下代码中用j表示。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//hashTable[arr[i]]是哈希值，即哈希表中某一个key对应的value。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//i表示初始数组下标。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//----第一步，遍历数组，得到哈希表和最大值----
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">countSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt;{
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">hashTable</span> <span style="color:#f92672">=</span> {},<span style="color:#75715e">//令一个哈希表等于一个对象
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#75715e">//目前不知道max最大数是多少，暂时令最大数为0
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> []<span style="color:#75715e">//令result等于一个空数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){ <span style="color:#75715e">//遍历数组，i是数组里每一个数的下标。
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">hashTable</span>)){<span style="color:#75715e">//如果arr[i]不在哈希表里面，arr[i]表示数组里下标为i的数字。
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#75715e">//那么就令arr[i]对应的哈希值为1
+</span><span style="color:#75715e"></span>  }<span style="color:#66d9ef">else</span>{<span style="color:#75715e">//如果arr[i]在哈希表里面
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span><span style="color:#75715e">//那么就令arr[i]对应的哈希值= 原哈希值+1
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>) {<span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]}<span style="color:#75715e">//如果arr[i]大于最大的数，就令最大的数等于这个arr[i]
+</span><span style="color:#75715e"></span>}
+<span style="color:#75715e">//----第二步，从最小值到最大值遍历哈希表，得到result数组----
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">&lt;=</span><span style="color:#a6e22e">max</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>){ <span style="color:#75715e">//遍历哈希表里的key，key用j表示。
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">j</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">hashTable</span>){<span style="color:#75715e">//如果j在hashTable里面
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">j</span>]; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){<span style="color:#75715e">//保证数组里面重复的数字被push进result数组，假设hashTable[j]=2，这个for循环可以让j被push两次。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//如果哈希值为1，则只被push一次。
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">j</span>)<span style="color:#75715e">//就将j推送到空数组result里面
+</span><span style="color:#75715e"></span>    }
+  }
+}
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span><span style="color:#75715e">//result是计数排序的结果
+</span><span style="color:#75715e"></span>} <span style="color:#75715e">// 目前代码有bug
+</span></code></pre></div><h2 id="heading4">计数排序的特点</h2>
+<ol>
+<li>由于引入了新的数据结构&ndash;hashTable，因此算法升级。</li>
+<li>只遍历数组一遍，之前的排序要重复遍历多次数组。(不过还要遍历一次hashTable)</li>
+<li>这叫做用空间换时间。hashTable是存储在内存上/硬盘上的一个空间，用多余的空间就可以节省多余的时间。</li>
+</ol>
+<h2 id="heading5">循环递归总结</h2>
+<ol>
+<li>各种排序都可以用递归和循环两种写法。</li>
+<li>所有递归都可以改写成循环。</li>
+<li>循环写起来更麻烦，但更好理解一些。</li>
+<li>递归写起来更简单，但大脑思考要更多一些。</li>
+</ol>
+<h2 id="33">我的33课答卷</h2>
+<p>请从以下算法中使用选择任意2到4种，写出代码。你可以抄课程讲义里的参考代码，但是必须是一个字一个字的抄，不可以直接复制粘贴。
+选择排序
+快速排序
+归并排序
+计数排序</p>
+<ol>
+<li>选择排序循环写法</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//第一步找到数组中的最小数值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt; {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){<span style="color:#75715e">//从i=1开始遍历数组
+</span><span style="color:#75715e"></span>     <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">index</span>]){
+     <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+     }
+     }<span style="color:#75715e">//如果i超过了数组长度，跳出for循环。
+</span><span style="color:#75715e"></span>     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">index</span>;<span style="color:#75715e">//遍历numbers数组，最后得到最小值的下标。
+</span><span style="color:#75715e"></span><span style="color:#75715e">//第二步将数组从小到大排列
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span> =&gt;{
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minIndex</span>(<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">i</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>;<span style="color:#75715e">//让index=新数组最小数字下标+i
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">index</span> <span style="color:#f92672">!==</span><span style="color:#a6e22e">i</span>){
+   <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">i</span>);<span style="color:#75715e">//如果当前最小数字下标不等于数组遍历本轮数字下标，就对调数组numbers里的numbers[index]和numbers[i]。如果index=i就什么也不做。
+</span><span style="color:#75715e"></span>   }
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>;<span style="color:#75715e">//for循环结束后，返回排好序的数组。
+</span><span style="color:#75715e"></span>};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">swap</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span> , <span style="color:#a6e22e">i</span> , <span style="color:#a6e22e">j</span>) =&gt; {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>];
+   <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">j</span>];
+   <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>;
+};<span style="color:#75715e">//swap函数，将下标为i和j的两个数交换位置
+</span></code></pre></div><ol start="2">
+<li>快速排序法</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">quickSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt; {
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>) {<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivotIndex</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#75715e">//让pivotIndex=数组中间的那个数字的下标
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">pivotIndex</span>,<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>];<span style="color:#75715e">//令pivot(基准数字) = 这个新数组中下标为0的数字。
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">pivot</span>){<span style="color:#a6e22e">left</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])
+}<span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">right</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])}
+}<span style="color:#75715e">//for循环结束，返回数组
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">left</span>).<span style="color:#a6e22e">concat</span> ( [<span style="color:#a6e22e">pivot</span>],<span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">right</span>) )
+}
+</code></pre></div><ol start="3">
+<li>归并排序</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mergeSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt;{
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">===</span><span style="color:#ae81ff">1</span>){<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">k</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">mergeSort</span>(<span style="color:#a6e22e">left</span>),<span style="color:#a6e22e">mergeSort</span>(<span style="color:#a6e22e">right</span>))
+}
+<span style="color:#75715e">//归并算法的核心在于merge部分---以下---
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">merge</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) =&gt;{
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">?</span>
+[<span style="color:#a6e22e">b</span>[<span style="color:#ae81ff">0</span>]].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>)))<span style="color:#f92672">:</span>
+[<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>]].<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>),<span style="color:#a6e22e">b</span>))
+}
+</code></pre></div><ol start="4">
+<li>计数排序</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">countSort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span> =&gt;{
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">hashTable</span> <span style="color:#f92672">=</span>{},<span style="color:#75715e">//令哈希表=一个对象
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
+<span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+   <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">hashTable</span>)){
+   <span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+   }<span style="color:#66d9ef">else</span>{
+   <span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]] <span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+   }
+   <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>){<span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]}
+}<span style="color:#75715e">//----第一个for循环完成两件事，遍历数组，得到哈希表和最大值----
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">&lt;=</span><span style="color:#a6e22e">max</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>){
+   <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">j</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">hashTable</span>){
+     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">hashTable</span>[<span style="color:#a6e22e">j</span>];  <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){<span style="color:#75715e">//保证数组里面重复的数字被push进result数组，假设hashTable[j]=2，这个for循环可以让j被push两次。
+</span><span style="color:#75715e"></span>     <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">j</span>)
+     }
+    }
+}
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
+}
+</code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://xiongzhongke.xyz/" >
+    &copy; 2020 人中车可的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

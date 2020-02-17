@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://xiongzhongke.xyz/posts/" />
-<meta property="og:updated_time" content="2020-01-24T13:33:19+08:00" />
+<meta property="og:updated_time" content="2020-02-17T16:05:32+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -94,6 +94,175 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/jquery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="link black dim">
+        JQuery学习总结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      内容来源：阮一峰的网络日志/jQuery设计思想
+http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html
+一、jQuery简介  jQuery是目前使用最广泛的javascript函数库。 jQuery设计模式：设计模式就是对通用代码取一个名字。 对于网页开发者来说，学会jQuery是必要的，为将来学习更高级的库打下基础。 互联网上最好的jQuery入门教材，是Rebecca Murphey写的《jQuery基础》（jQuery Fundamentals）。 全面掌握jQuery，遇到问题的时候，心里有底，基本知道使用它的哪一个功能，然后可以迅速从手册中找到具体的写法。  二、jQuery 如何获取元素 jQuery的基本设计思想和主要用法，就是&quot;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+jQuery(&#34;.test&#34;) // 选择class为test的div元素 $(&#39;div.myClass&#39;) // 选择class为myClass的div元素 $(&#39;div&#39;).filter(&#39;.myClass&#39;); //选择class等于myClass的div元素 jQuery(&#34;.test&#34;).find(&#34;.child&#34;)//选择class为test的div元素的子元素中class为child的子元素 三、jQuery 的链式操作是怎样的 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&#39;div&#39;).find(&#39;h3&#39;).eq(2).html(&#39;Hello&#39;); 分解如下：
+$(&#39;div&#39;) //找到div元素 　.find(&#39;h3&#39;) //选择其中的h3元素 　.eq(2) //选择第3个h3元素 　.html(&#39;Hello&#39;); //将它的内容改为Hello jQuery还提供了.end()方法，使得结果集可以后退一步：
+$(&#39;div&#39;) .find(&#39;h3&#39;)//选择其中的h3元素 　.eq(2)//选择第3个h3元素 　.html(&#39;Hello&#39;)//将它的内容改为Hello 　.end() //退回到选中所有的h3元素的那一步 　.eq(0) //选中第一个h3元素 　.html(&#39;World&#39;); //将它的内容改为World 四、jQuery 如何创建元素 创建新元素的方法非常简单，只要把新元素直接传入jQuery的构造函数就行了：
+$(&#39;&lt;p&gt;Hello&lt;/p&gt;&#39;); $(&#39;&lt;li class=&#34;new&#34;&gt;new list item&lt;/li&gt;&#39;); $(&#39;ul&#39;).append(&#39;&lt;li&gt;list item&lt;/li&gt;&#39;); 五、jQuery 如何移动元素 jQuery设计思想之五，就是提供两组方法，来操作元素在网页中的位置移动。
+方法1：是直接移动该元素。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC35%E8%AF%BEdom%E7%BC%96%E7%A8%8B/" class="link black dim">
+        第35课DOM编程
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、DOM简介 DOM就是Document Object Model js用document操作网页。
+ jquery操作dom vue操作dom react操作dom  二、DOM的API 如何获取元素(Element/tag)的API。 获取的div等东西，都是一个对象。
+window.idxxx或者直接idxxx//这个大部分人不知道 //以下三种基本不用，除非要兼容IE document.getElementsByTagName(&#39;div&#39;) document.getElementsByTagName(&#39;div&#39;)[0] document.getElementsByClassName(&#39;red&#39;)[0] //------ document.querySelector(&#39;#idxxx&#39;) document.querySelectorAll(&#39;.red&#39;)[0] DOM的API都很长，不方便使用。但是必须要学，因为不学就看不懂jQuery，虚拟DOM等内容。
+元素的6层原型链 console.dir(div)//看元素的6层原型链 三、API增删改查 四、DOM操作跨线程 浏览器功能：
+ 渲染引擎：渲染HTML\CSS JS引擎：执行JS代码 以上两个引擎在不同的线程。  div1本来只能存在于内存里面，但是
+document.body.appendChild(div1) 让div1出现在了页面上。
+DOM很难用，怎么向面试官证明你会dom？  自己封装一个dom库 写一篇关于dom的博客  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC34%E8%AF%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" class="link black dim">
+        第34课数据结构1
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      沙盒编辑网址：https://codesandbox.io/s/vanilla 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/20200203%E7%9B%B4%E6%92%AD%E8%AF%BE/" class="link black dim">
+        20200203直播课
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       typescript类型、泛型等概念的理解 赋值作用域 两个老师的课程表  https://mp.weixin.qq.com/s/mnQffXx7fqqwTmYXT5LABA?
+https://mp.weixin.qq.com/s/kX_cJY3vBhprmHTfxef8tw?
+现在的课程比以前的版本多了大约50%的内容  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC33%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-%E5%BE%AA%E7%8E%AF%E7%AE%97%E6%B3%95/" class="link black dim">
+        第33课排序算法  循环算法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、选择排序法：递归和循环 minIndex 重写&ndash;&gt;选择排序的循环写法：for 循环遍历 numbers //---第一步找到一组数中的最小数值 let minIndex = numbers =&gt; { let index = 0; //把下标为0的第一个数记为index  for (let i = 1; i &lt; numbers.length; i++) { //令i的初始值为1，即从下标为1的第二个数开始，如果i&lt;数组长度，那么进入for循环，每次循环结束，i加1.  if (numbers[i] &lt; numbers[index]) { //如果遍历的本轮数字比当前的index数字小  index = i; //那么把小的记为新的index(index可以看作一个变量)  } } //如果i超过了数组长度，跳出for循环，返回当前index  return index; //遍历numbers里面所有数，再返回index，即得到最小值的下标。 }; //---第二步将一组数从小到大排列 let sort = numbers =&gt; { for (let i = 0; i &lt; numbers.length - 1; i++) { //令i的初始值为0，即从下标为0的第一个数开始，如果i&lt;数组长度-1，那么进入for循环，每次循环结束，i加1  console.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC32%E8%AF%BE%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="link black dim">
+        第32课排序算法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、排序算法的思路： 第一步，求出任意数组的最小值 Math.min; //找数组中的最小数，JS中内置了Math.min //首字母大写的一般是构造函数，如Object。但Math是一个特例。 如何理解递归思路  推荐书籍 SICP：计算机程序的构造和解释。 用代入法快速理解递归。 用调用栈快速理解递归。  析构赋值 let minOf2 = ([a, b]) =&gt; (a &lt; b ? a : b); let min = numbers =&gt; { if (numbers.length &gt; 2) { //当数组长度大于2时  return min([numbers[0], min(numbers.slice(1))]); //用第0个数和&#39;除去第0个数的后面的一组数中的最小值&#39;求最小值。  } else { //当数组长度为2时  return Math.min.apply(null, numbers); //调用函数Math.min,用apply把这组数展开，让min去调用。  } }; //上述代码一直循环到最简单的长度为2的数组，开始调用Math.min。化解为多个嵌套的长度为2的数组，循环求解。 上述代码就是递归，特点如下：  函数 min 不停调用自己，每次调用的参数略有不同。 当满足某个简单条件时，则实现一个简单的调用。  第二步，对任意数组从小到大排列 从 sort2/sort3/sort4 推出 sort 函数 sort3
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC31%E8%AF%BE%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BC%AA%E4%BB%A3%E7%A0%81%E4%B8%8E%E6%B5%81%E7%A8%8B%E5%9B%BE/" class="link black dim">
+        第31课算法与数据结构伪代码与流程图
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、伪代码与流程图 二、快速入门数据结构 推荐八种排序算法，把八种排序算法学会，基本上可以学会5-6种数据结构。有几种都是用的数组。 学会3-4种数据结构，基本上就可以面试了。
+三、算法 算法就是把你解决一个问题的思路表达出来。
+ 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC30%E8%AF%BEjs%E6%80%BB%E7%BB%93/" class="link black dim">
+        30课JS总结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      知识点 基本概念 内存、变量、数据类型、对象
+控制语句 if&hellip;else&hellip;
+for&hellip;
+对象  原型、原型链 对象分类 new一个新对象 构造函数 this的隐式传递和显式传递  难点：JS三座大山 原型、this、AJAX
+第一个重要知识：JS公式（不要理解，直接背诵） 对象.__proto__ === 其构造函数.prototype JS唯一公式，如果不会就套公式。
+第二个重要知识：根公理 Object.prototype是所有对象的(直接或间接)原型。
+所谓的公理，就是规定好的。
+第三个重要知识：函数公理 所有函数都是由Function构造的。
+把第一个公理和第三个公理结合起来，得到下面式子：
+任何函数.__proto __ === Function.prototype 任意函数有Object/Array/Function
+以上三个公理不容置疑，其他的都可以质疑。
+JS公式、根公理、函数公理，基于这三个知识和其他基础定义可以推出JS世界。 对象里面没有另一个对象，只有另一个对象的地址。
+Object.prototype.__proto__ === null//根据公式二 --&gt; true 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC29%E8%AF%BEjs%E8%BF%90%E7%AE%97%E7%AC%A6/" class="link black dim">
+        第29课JS运算符&amp;前端面试题
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一、需要记忆的特例（可能的前端面试题）  余数 x%7 ：-1 % 7 = -1 指数 x**3 自增自减x++/++x/x&ndash;/&ndash;x  var a = 1 a++ //值为1，值为++之前的值 ++a //值为2，值为++之后的值 ++ //让a加1 a++/a&ndash;，a在前值为前； ++a/&ndash;a，a在后值为后
+ 或且非  ||
+&amp;&amp;
+!
+ 求值运算符  var a = 8 +a //取a的值，a=8   负数运算符  var a = 8 -a //取a的负值，a=-8 注意：永远不要用&quot;==&quot;要用&quot;===&rdquo;（可参见真值表） &ldquo;==&quot;会自动类型转换，导致JS三位一体。 [] !== []//空数组不全等于空数组 {} !== {}//空对象不全等于空对象 NaN !== NaN 二、防御性编程（可选链语法）/布尔运算符  以防console不存在报错（console有可能被人改写）  console &amp;&amp; console.log &amp;&amp; console.log(&#34;hi&#34;) //如果前两个都成立，我就执行第三个 以下为明年最新的防御性编程语法
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="https://xiongzhongke.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
         JS函数的执行时机
       </a>
@@ -102,199 +271,6 @@
       1 解释为什么如下代码会打印 6 个 6 let i = 0; //声明变量i=0 for (i = 0; i &lt; 6; i++) { setTimeout(() =&gt; { console.log(i); }, 0); //令i=0,1,2,3,4,5循环六次,每次循环结束，i=6 } 如果没有setTimeout，每次判断完i&lt;6后，直接打印当前的 i，也就是 i=0,1,2,3,4,5; 即打印 i 在循环结束前。
 因为有setTimeout，指过一会儿后，尽快打印出 i，因此每次循环结束后才会打印 i，而每次循环结束后 i=6。所以会打印 6 个 6。
 2 写出让上面代码打印 0、1、2、3、4、5 的方法 for (let i = 0; i &lt; 6; i++) { setTimeout(() =&gt; { console.log(i); }, 0); } 
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC27%E8%AF%BEjs%E5%87%BD%E6%95%B0/" class="link black dim">
-        第27课JS函数
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      二、JS函数作用域 例1
-function f1(){ let a =1 function f2(){ let a =2 console.log(a) } console.log(a) a=3 f2() } f1() 返回值
-1 2 例2
-function f1(){ let a =1 function f2(){ let a =2 function f3(){ console.log(a) } a=22 f3()//表示启动f3()但没有a的值，console.log(a)进入f2()  } console.log(a) a=100 f2() } f1() 返回值
-1 22 
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC26%E8%AF%BEjs%E6%95%B0%E7%BB%84/" class="link black dim">
-        第26课JS数组
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、数组是什么 二、数组增删改查  增 删  删除头部元素
-arr.shift(); //arr被修改，并返回被删元素 删除尾部元素
-arr.pop(); //arr被修改，并返回被删元素 删除中间元素
-arr.splice(x, 1); //从x号元素开始，从左至右删除一个元素 arr.splice(x, 3); //从x号元素开始，从左至右删除三个元素 arr.splice(x, 1, &#34;z&#34;); //并在删除位置加入&#39;z&#39; arr.splice(x, 1, &#34;z&#34;, &#34;k&#34;); //并在删除位置加入&#39;z&#39;,&#39;k&#39;  改 查   查看所有属性名  let arr = [1, 2, 3, 4, 5]; arr.x = &#34;xxx&#34;; Object.keys(arr); for (let key in arr) { console.log(`${key}:${arr[key]}`); } for 循环是访问数组比较常见的形式。
-查看数字（字符串）属性名和值。
-查看单个属性  查找某个元素是否在数组里。
-arr.indexOf(item); //存在返回索引，否则返回-1 使用条件查找元素
-arr.find(item =&gt; item % 2 === 0); //找第一个偶数 使用条件查找元素的索引
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC25%E8%AF%BE-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/" class="link black dim">
-        第25课 JS对象分类
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC24%E8%AF%BE-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="link black dim">
-        第24课 JS对象基本用法
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、对象的定义、声明对象的两种语法  对象的定义   无序的数据集合 键值对的集合  let obj = { name: &#34;frank&#34;, age: 18 }; let obj = new Object({ name: &#34;frank&#34; }); console.log({ name: &#34;frank&#34;, age: 18 }); 对象的属性  键 key&ndash;&gt;'name' 也叫对象的属性名。
-键名是字符串。键名的引号可以省略，省略后只能写标识符，不能写汉字或表情符 emoji。
-值 value&ndash;&gt;'frank' 也叫对象的属性值。
-键值对&ndash;&gt;'name':'frank'
-Object.keys(obj)可以得到 obj 的所有 key。
-变量作属性名  let p1 =&#39;name&#39; let obj ={p1:&#39;frank&#39;},属性名为字符串&#39;p1&#39; let obj = {[p1]:&#39;frank&#39;},这样写,属性名为变量p1,变量求值后属性名为&#39;name&#39; 隐藏的属性名  JS 中每一个对象都有一个隐藏属性，隐藏属性存储着共有属性组成的对象的地址，这个共有属性组成的对象叫做原型。
-二、如何删除对象的属性 delete obj.xxx; 或; delete obj[&#34;xxx&#34;]; 以上代码删除 obj 的 xxx 属性名和属性值。
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC22%E8%AF%BE-js%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
-        第22课 JS语法介绍
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、什么是表达式和语句 表达式
-1 + 2; add(1, 2); console.log; console.log(3); 语句
-var a = 1;  值和返回值不一样 大小写敏感 大部分空格没有实际意义 大部分回车没有实际意义，但 return 后面不能回车  二、标识符的规则 第一个字符，可以是 Unicode 字母或$或_或中文，第一个字符后面的字符，还可以有数字。
-var _ = 1; var $ = 2; var __ = 6; var 你好 = &#34;hi&#34;; 三、if else 语句  if(表达式){语句 1}else{语句 2}；  如果(表达式)为真，执行{语句 1}；
-如果(表达式)为假，执行{语句 2}；
-switch 语句  switch (fruit){ case &#34;banana&#34;: break; case &#34;apple&#34;: break; default: } 问号冒号表达式  表达式 1？表达式 2：表达式 3
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E7%AC%AC19%E8%AF%BE-javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="link black dim">
-        第19课 JavaScript的诞生
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、网景公司和 sun 公司 1994 年，网景公司（Netscape）发布了 Navigator 浏览器 0.9 版。这是历史上第一个比较成熟的网络浏览器，轰动一时。但是，这个版本的浏览器只能用来浏览，不具备与访问者互动的能力。&hellip;&hellip;网景公司急需一种网页脚本语言，使得浏览器可以与网页互动。
-网景公司当时有两个选择：一个是采用现有的语言，比如 Perl、Python、Tcl、Scheme 等等，允许它们直接嵌入网页；另一个是发明一种全新的语言。
-就在这时，发生了另外一件大事：1995 年 Sun 公司将 Oak 语言改名为 Java，正式向市场推出。sun 公司大肆宣传 Java 会成为未来的主宰。
-网景公司与 Sun 公司结成联盟。因此，Javascript 后来就是网景和 Sun 两家公司一起携手推向市场的，这种语言被命名为&quot;Java+script&quot;并不是偶然的。
-二、34 岁的系统程序员 Brendan Eich 1995 年 4 月，网景公司录用了 34 岁的系统程序员 Brendan。Brendan Eich 的主要方向和兴趣是函数式编程，网景公司招聘他的目的，是研究将 Scheme 语言作为网页脚本语言的可能性。Brendan Eich 本人也是这样想的，以为进入新公司后，会主要与 Scheme 语言打交道。
-1995 年 5 月，网景公司做出决策，未来的网页脚本语言必须&quot;看上去与 Java 足够相似&rdquo;，但是比 Java 简单，使得非专业的网页作者也能很快上手。这个决策实际上将 Perl、Python、Tcl、Scheme 等非面向对象编程的语言都排除在外了。
-Brendan Eich 被指定为这种&quot;简化版 Java 语言&quot;的设计师。但是，他对 Java 一点兴趣也没有。为了应付公司安排的任务，他只用 10 天时间就把 Javascript 设计出来了。
-Javascript 设计思路如下：
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/%E6%B5%85%E6%9E%90url/" class="link black dim">
-        浅析URL
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、URL 包含哪几部分，每部分分别有什么作用 A Uniform Resource Locator。 例子：https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5
- 协议 =&gt; https:// 域名 =&gt; www.baidu.com IP =&gt; 220.181.38.148 / 39.156.69.79（百度IP）  Internet Protocal。定位一台设备；封装数据报文，以跟其他设备交流。
- 端口 =&gt; 一台服务器可以提供很多服务。每个服务对应一个号码，这个号码叫端口号port。  http服务最好用80端口（http://127.0.0.1:8080/文件名 本地电脑调试）
-https服务最好用443端口
-FTP服务（大学校园网用）最好用21端口
-一共有65535个端口。0~1023端口留给系统/管理员使用。其他端口给普通用户使用。比如http-server默认使用8080端口。一个端口如果被占用，你就只能换一个端口。 设置端口号：
-hs -c-1 -p 1200 就使用新的端口号来访问本地文件http://127.0.0.1:1200/index.html
- 路径 =&gt; /s, 用来判断你要访问什么网页。 查询参数 =&gt; ?wd=hello&amp;rsv_spt=1，判断你要访问该网页的第几页 锚点 =&gt; 访问该页面的哪一块内容，实现文档内部的定位。  IP用来定位一个设备，端口用来定位一个设备的一个服务，有了IP和端口，我们就可以定位一个设备提供的服务。比如百度的设备提供的网页服务，腾讯的设备提供的聊天服务，或者淘宝的设备提供的支付服务。这些服务都可以通过IP和端口唯一确定。 IP和端口缺一不可。 二、IP 的作用是什么，ping 命令怎么用  Internet Protocal。 主要约定两件事：（1）定位一台设备；（2）封装数据报文，以跟其他设备交流。 外网IP：路由器对应一个外网IP，是电信分配给路由器的。（这里的外网指：你的路由器之外的网络），例如：58.51.255.38(查询ip138.com可以看到自己路由器分配的外网IP)，当路由器重启，会重新分配一个外网ip给你。 内网IP：路由器会在你家里创建一个内网，内网中的设备（电脑，手机，ipad）使用内网IP。这个IP的格式一般来说是/192.168.xxx.xxx/。  内网IP是路由器自己分配给自己的。一般路由器会给自己分配一个好记的内网IP/192.168.1.1/，路由器会给内网中的每一个设备分配一个内网IP，例如电脑是192.168.1.2，手机是192.168.1.3，以此类推。
-外网和内网是两个隔绝的空间，无法互通。唯一的联通点是路由器。所以路由器被叫做“网关”。
-http://192.168.1.58:8080/文件名 本地手机调试
-http://127.0.0.1:8080/文件名 本地电脑调试
-通过路径C:\Windows\System32\drivers\etc\hosts，以管理员身份打开hosts文件，加入一行代码
-127.0.0.1 xiongzk 可以改变调试网址为：http://xiongzk:8080/文件名
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="link black dim">
-        CSS知识总结
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、CSS布局 布局是屏幕平面上的。   float布局
-  flex布局
-  一维布局用flex
-经验
- 永远不要把我width和height写死，除非特殊说明。 用min-width/max-width/min-height/max-height flex可以基本满足所有需求 flex和margin-xxx：auto配合有意外的效果。  Grid布局  二维布局用Grid，适合不规则布局。
-https://css-tricks.com/snippets/css/complete-guide-grid/
-二、CSS定位 定位是垂直于屏幕的。  position属性   static 默认值，待在文档流里 relative 相对定位 absolute 绝对定位 fixed 固定定位 sticky 粘滞定位  经验：
- 如果你写了absolute,一般都要补一个relative 如果你写了absolute或fixed，一定要补top和left sticky兼容性很差，主要用于面试装逼。  层叠上下文  Google搜索“MDN 层叠上下文”
-https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context
- 每一个层叠上下文就是一个新的小世界（作用域） 这个小世界里面的z-index跟外界无关 处在同一个小世界的z-index才能比较。 记住负的z-index逃不出小世界。  http://js.jirengu.com/modez/1/edit?html,css,output
-CSS定位回顾  盒模型中的背景 浮动是怎么脱离文档流的 position的五个取值 z-index的用法 层叠上下文是什么 负z-index  三、浏览器渲染原理  根据HTML构建HTML树（DOM） 根据CSS构建CSS树（CSSOM） 将两棵树合并成一颗渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）  如何更新样式  一般用JS来更新样式  div.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://xiongzhongke.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/" class="link black dim">
-        CSS盒模型是什么
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      CSS 盒模型(Box Model) 所有HTML元素可以看作盒子，在CSS中，&ldquo;box model&quot;这一术语是用来设计和布局时使用。 CSS盒模型本质上是一个盒子，封装周围的HTML元素，盒模型由外到内依次包括：
- 边距（margin） 边框（border） 内边距（padding） 内容（content）  盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
-两种盒模型  content-box  content-box width = 内容宽度
- border-box  border-box width = 内容宽度 + padding + border
-border-box更好用。
-* { box-sizing: border-box; } 练习：
-http://js.jirengu.com/kuqowapere/3/edit?html,css,output
-margin合并  那些情况会合并   父元素、子元素margin合并 子元素之间margin合并  阻止margin合并   父子合并用padding/border挡住 父子合并用overflow:hidden挡住 父子合并用display：flex， 兄弟合并可用inline-block消除  基本长度单位  px 像素 em相对于自身font-size的倍数 百分数 整数  颜色  十六进制#FF6600 RGBA颜色rgb（0，0，0）或者（0，0，0，1） hsl颜色hsl（360，100%，100%）  
     </div>
   </div>
 </div>
@@ -336,12 +312,23 @@ margin合并  那些情况会合并   父元素、子元素margin合并 子元�
     <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
     
     
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
     <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
